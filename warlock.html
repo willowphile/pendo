@@ -22,7 +22,8 @@
                     email:        user_email, // Recommended if using Pendo Feedback, or NPS Email
                     full_name:    user_full_name,// Recommended if using Pendo Feedback
                     language:     user_language,
-                    random:       user_random_data
+                    random:       user_random_data,
+                    boolean:      user_boolean
 
                     // You can add any additional visitor level key-values here,
                     // as long as it's not one of the above reserved names.
@@ -43,6 +44,7 @@
             });
     })('a93e68a6-46fd-443a-699f-aa31985c066d');
 </script>
+<!--
 <script>
   !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.13.1";
   analytics.load("yg9SWXMqQrvcvm5og2wyxiomzZ9QkMAf");
@@ -53,7 +55,7 @@
   analytics.group('SegmentGroup', {
 });
   }}();
-</script>
+</script>-->
 <title>Page Title</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -119,7 +121,7 @@ body {
 }
 
 /* Column container */
-.row {  
+.row {
   display: -ms-flexbox; /* IE10 */
   display: flex;
   -ms-flex-wrap: wrap; /* IE10 */
@@ -185,8 +187,13 @@ body {
   color: white;
 }
 
+.void:focus {
+  background: black;
+  color: purple;
+}
+
 /* Main column */
-.main {   
+.main {
   -ms-flex: 70%; /* IE10 */
   flex: 70%;
   background-color: white;
@@ -209,7 +216,7 @@ body {
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
-  .row {   
+  .row {
     flex-direction: column;
   }
 }
@@ -233,7 +240,7 @@ body {
 
 <div class="navbar">
   <a href="home.html" class="active">Home</a>
-<a href="warlock.html">Warlock</a> 
+<a href="warlock.html">Warlock</a>
 <a href="hunter.html">Hunter</a>
   <a href="titan.html">Crayon-eater</a>
   <a href="cats.html" class="right">Cats</a>
@@ -250,14 +257,15 @@ body {
   </div>
   <div class="main">
     <h2>Warlocks</h2>
-<button onclick="location.href = './FirstLevel/warlockFirstLevel.html';" id="myButton" class="btn arc">Stormcaller</button>
-<button onclick="location.href = './FirstLevel/SecondLevel/warlockSecondLevel.html';" id="myButton" class="btn void">Voidwalker</button>
-<button onclick="location.href = 'https://destiny.fandom.com/wiki/Dawnblade';" id="myButton" class="btn solar">Dawnblade</button>
+<button onclick="location.href = './FirstLevel/warlockFirstLevel.html';" id="myButton" class="btn arc" custom.html="arcCustom">Stormcaller</button>
+<button onclick="location.href = './FirstLevel/SecondLevel/warlockSecondLevel.html';" id="myButton" class="btn void" custom.html="voidCustom">Voidwalker</button>
+<button onclick="location.href = 'https://destiny.fandom.com/wiki/Dawnblade';" id="myButton" class="btn solar" custom.html="solarCustom">Dawnblade</button>
+<button onclick="location.href = #" id="myButton" class="btn void">Dummy Button</button>
 <br>
 <br>
 <p>Vex stormcaller void mara titan io nokris no time to explain</p><br>
 
-<!-- Hold onto ths for later 
+<!-- Hold onto ths for later
 <button id="myButton" class="float-left submit-button" >Home</button>
 
 <script type="text/javascript">
@@ -277,8 +285,8 @@ body {
 </div>
 <div class="footer">
   <h2>I want to go to there</h2>
-  <a href="https://www.bungie.com">Bungo</a> | 
-  <a href="https://www.d2checklist.com">D2 Checklist</a> | 
+  <a href="https://www.bungie.com">Bungo</a> |
+  <a href="https://www.d2checklist.com">D2 Checklist</a> |
   <a href="https://www.destinyitemmanager.com">DIM</a>
 </div>
 
