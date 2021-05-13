@@ -17,20 +17,24 @@
             // Call this whenever information about your visitors becomes available
             // Please use Strings, Numbers, or Bools for value types.
             pendo.initialize({
+              //DisableGuides: True,
                 visitor: {
                     id:           user_id,   // Required if user is logged in
                     email:        user_email, // Recommended if using Pendo Feedback, or NPS Email
                     full_name:    user_full_name,// Recommended if using Pendo Feedback
                     language:     user_language,
                     random:       user_random_data
+                    //boolean:      user_boolean
+                    //date1:        user_date1
+                    //date2:        user_date2
 
                     // You can add any additional visitor level key-values here,
                     // as long as it's not one of the above reserved names.
                 },
 
                 account: {
-                    id:           user_account_id // Highly recommended
-                    // name:         // Optional
+                    id:           user_account_id, // Highly recommended
+                    type:         "AccountType"// Optional
                     // is_paying:    'true' // Recommended if using Pendo Feedback
                     // monthly_value: '2.49' // Recommended if using Pendo Feedback
                     // planLevel:    // Optional
@@ -43,6 +47,7 @@
             });
     })('a93e68a6-46fd-443a-699f-aa31985c066d');
 </script>
+<!--
 <script>
   !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.13.1";
   analytics.load("yg9SWXMqQrvcvm5og2wyxiomzZ9QkMAf");
@@ -53,7 +58,7 @@
   analytics.group('SegmentGroup', {
 });
   }}();
-</script>
+</script>-->
 <title>Alisyn's Playground</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -67,7 +72,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
 }
-
+/* Test for offset labels
+label::before {
+  content: "LABEL";
+}
+*/
 /* Header/logo Title */
 .header {
   padding: 80px;
@@ -119,7 +128,7 @@ body {
 }
 
 /* Column container */
-.row {  
+.row {
   display: -ms-flexbox; /* IE10 */
   display: flex;
   -ms-flex-wrap: wrap; /* IE10 */
@@ -205,7 +214,7 @@ body {
   color: white;
 }
 /* Main column */
-.main {   
+.main {
   -ms-flex: 70%; /* IE10 */
   flex: 70%;
   background-color: white;
@@ -228,7 +237,7 @@ body {
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
-  .row {   
+  .row {
     flex-direction: column;
   }
 }
@@ -252,7 +261,7 @@ body {
 
 <div class="navbar">
   <a href="#" class="active">Home</a>
-<a href="warlock.html">Warlock</a> 
+<a href="warlock.html">Warlock</a>
 <a href="hunter.html">Hunter</a>
   <a href="titan.html">Crayon-eater</a>
   <a href="cats.html" class="right">Cats</a>
@@ -264,9 +273,20 @@ body {
     <img src="rainbowEmblem.png" width="300"><br>
     <img src="catEmblem.png" width="300"><br>
     <img src="heartEmblem.png" width="300"><br>
-    <p>Lorem ipsum nightstalker fatebringer.</p>
+    <br>
+    <SCRIPT LANGUAGE="JAVASCRIPT">
 
-  </div>
+      var r_text = new Array ();
+      r_text[0] = "Lorem ipsum nightstalker fatebringer.";
+      r_text[1] = "Lorem ipsum witherhoard ikelos.";
+      r_text[2] = "Lorem ipsum stasis thunderlord.";
+
+      var i = Math.floor(r_text.length * Math.random());
+
+      document.write(r_text[i]);
+
+    </script>
+</div>
   <div class="main">
     <h2>Destiny!</h2>
 <button onclick="location.href = 'https://www.bungie.com';" id="myButton" class="btn red">Bungo</button>
@@ -280,10 +300,9 @@ body {
 
 <div class="footer">
   <h2>Helpful Links</h2>
-  <a href="https://www.bungie.com">Bungo</a> | 
-  <a href="https://www.d2checklist.com">D2 Checklist</a> | 
+  <a href="https://www.bungie.com">Bungo</a> |
+  <a href="https://www.d2checklist.com">D2 Checklist</a> |
   <a href="https://www.destinyitemmanager.com">DIM</a>
 </div>
-
 </body>
 </html>

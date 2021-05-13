@@ -87,9 +87,6 @@ body {
 .navbar {
   overflow: hidden;
   background-color: #333;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
 }
 
 /* Style the navigation bar links */
@@ -118,6 +115,52 @@ body {
 .navbar a.active {
   background-color: #666;
   color: white;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 20px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: ddd;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 20px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 /* Column container */
@@ -235,9 +278,19 @@ body {
 
 <div class="navbar">
   <a href="home.html" class="active">Home</a>
-<a href="warlock.html">Warlock</a>
-<a href="hunter.html">Hunter</a>
+  <a href="warlock.html">Warlock</a>
+  <a href="hunter.html">Hunter</a>
   <a href="titan.html">Crayon-eater</a>
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="warlock.html">Warlock</a>
+      <a href="hunter.html">Hunter</a>
+      <a href="titan.html">Crayon-eater</a>
+    </div>
+  </div>
   <a href="cats.html" class="right">Cats</a>
 </div>
 
