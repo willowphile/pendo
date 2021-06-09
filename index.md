@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <script src="firstfile.js"></script>
-  <--
-    <script>
+<!--
+  <script>
     //var random_number = Math.floor(Math.random()*500000+100000);
     //var accountArray= ["Clovis_Bray_Corporation", "Ishtar_Collective", "Operation_Babydog"];
     //var random_account= accountArray[Math.floor(Math.random()*accountArray.length)];
