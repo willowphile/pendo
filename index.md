@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <script src="firstfile.js"></script>
-  <script>
+  <--
+    <script>
     //var random_number = Math.floor(Math.random()*500000+100000);
     //var accountArray= ["Clovis_Bray_Corporation", "Ishtar_Collective", "Operation_Babydog"];
     //var random_account= accountArray[Math.floor(Math.random()*accountArray.length)];
@@ -22,7 +23,7 @@
                     id:           user_id,   // Required if user is logged in
                     email:        user_email, // Recommended if using Pendo Feedback, or NPS Email
                     full_name:    user_full_name,// Recommended if using Pendo Feedback
-                    language:     user_language,
+                    language:     "en_GB",
                     random:       user_random_data
                     //boolean:      user_boolean
                     //date1:        user_date1
@@ -43,11 +44,17 @@
 
                     // You can add any additional account level key-values here,
                     // as long as it's not one of the above reserved names.
-                }
+                },
+
+                parentAccount: {
+                    id:           'Bungie',
+                    name:         'Bungo',
+                    parentAccountOnly: 'yes'
+                  }
             });
     })('a93e68a6-46fd-443a-699f-aa31985c066d');
 </script>
-<!--
+-->
 <script>
   !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.13.1";
   analytics.load("yg9SWXMqQrvcvm5og2wyxiomzZ9QkMAf");
@@ -58,7 +65,7 @@
   analytics.group('SegmentGroup', {
 });
   }}();
-</script>-->
+</script>
 <title>Alisyn's Playground</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -67,9 +74,15 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: myCustomFont;
+  src: url(Montserrat/Montserrat-Medium.otf);
+}
+
 /* Style the body */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: myCustomFont;
+  font-size: 20px;
   margin: 0;
 }
 /* Test for offset labels
@@ -87,7 +100,8 @@ label::before {
 
 /* Increase the font size of the heading */
 .header h1 {
-  font-size: 40px;
+    font-family: myCustomFont;
+    font-size: 40px;
 }
 
 /* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
@@ -149,6 +163,7 @@ label::before {
   border: none;
   background-color: inherit;
   padding: 14px 28px;
+  font-family: myCustomFont;
   font-size: 16px;
   cursor: pointer;
   display: inline-block;

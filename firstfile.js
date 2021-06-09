@@ -5,7 +5,7 @@ var user_email = 'alisyn.collins+3@gmail.com';
 var user_full_name = 'Ikora Rey';
 var user_account_id = 'Operation_Babydog';
 var user_language = 'en_GB';
-var user_random_data = 'Warlock';
+var user_random_data = '';
 var user_boolean = true;
 
 /*
