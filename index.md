@@ -76,7 +76,7 @@
 
 @font-face {
   font-family: myCustomFont;
-  src: url(Montserrat/Montserrat-Medium.otf);
+  src: url(montserrat/Montserrat-Medium.otf);
 }
 
 /* Style the body */
