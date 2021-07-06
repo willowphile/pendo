@@ -76,7 +76,7 @@
 
 @font-face {
   font-family: myCustomFont;
-  src: url(montserrat/Montserrat-Medium.otf);
+  src: url(Montserrat/Montserrat-Medium.otf);
 }
 
 /* Style the body */
@@ -280,6 +280,8 @@ label::before {
 <a href="hunter.html">Hunter</a>
   <a href="titan.html">Crayon-eater</a>
   <a href="cats.html" class="right">Cats</a>
+  <a href="analytics.html" class="right">Data</a>
+  <a href="Darkness.html" class="right">Dark</a>
 </div>
 
 <div class="row">
