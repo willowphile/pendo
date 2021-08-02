@@ -1,135 +1,154 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-* {
-  box-sizing: border-box;
-}
+   <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+         * {
+         box-sizing: border-box;
+         }
+         @font-face {
+         font-family: myCustomFont;
+         src: url(Montserrat/Montserrat-Medium.otf);
+         }
+         /* Style the body */
+         body {
+         font-family: myCustomFont;
+         font-size: 20px;
+         margin: 0;
+         }
+         /* Create two equal columns that floats next to each other */
+         .column {
+         float: left;
+         width: 50%;
+         padding: 10px;
+         font-size: 14px
+         }
+         /* Clear floats after the columns */
+         .row:after {
+         content: "";
+         display: table;
+         clear: both;
+         }
+         /* Style the buttons */
+         .btn {
+         font-family: myCustomFont;
+         border: none;
+         outline: none;
+         padding: 12px 16px;
+         background-color: #f1f1f1;
+         cursor: pointer;
+         }
+         .btn:hover {
+         background-color: #ddd;
+         }
+         .btn.active {
+         background-color: #666;
+         color: white;
+         }
+      </style>
+      <script>
+         !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="yg9SWXMqQrvcvm5og2wyxiomzZ9QkMAf";analytics.SNIPPET_VERSION="4.13.2";
+         analytics.load("yg9SWXMqQrvcvm5og2wyxiomzZ9QkMAf");
+         analytics.page();
+         analytics.identify("SegmentUser4", {
+           name: "Jocelyn"
+         });
+         analytics.group('SegmentGroup1', {
+           name: "Jocelyn"
+             });
+           }}();
+      </script>
+   </head>
+   <body>
+      <h2>List View or Grid View</h2>
+      <p>Click on a button to choose list view or grid view.</p>
+      <div id="btnContainer">
+         <button class="btn" onclick="listView()"><i class="fa fa-bars"></i> List</button>
+         <button class="btn active" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+      </div>
+      <br>
+      <div class="row">
+         <div class="column" style="background-color:#3EB4CC;">
+            <h2>Fahrenheit to Celcius</h2>
+            <p>
+               <label>Fahrenheit</label>
+               <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+            </p>
+            <p>Celcius: <span id="outputCelcius"></span></p>
+            <script>
+               function temperatureConverter(valNum) {
+                 valNum = parseFloat(valNum);
+                 document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+               }
+            </script>
+         </div>
+         <div class="column" style="background-color:#B79FBC;">
+            <h2>Celcius to Fahrenheit</h2>
+            <p>
+               <label>Celcius</label>
+               <input id="inputCelcius" type="number" placeholder="Celcius" oninput="temperatureConverterCtoF(this.value)" onchange="temperatureConverterCtoF(this.value)">
+            </p>
+            <p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+            <script>
+               function temperatureConverterCtoF(valCtoF) {
+                 valCtoF = parseFloat(valCtoF);
+                 document.getElementById("outputFahrenheit").innerHTML=(valCtoF*1.8)+32;
+               }
+            </script>
+         </div>
+      </div>
+      <div class="row">
+         <div class="column" style="background-color:#43edac;">
+            <h2>I</h2>
+            <p>Cheese on toast squirty cheese brie. Blue castello cut the cheese danish fontina rubber cheese boursin roquefort rubber cheese cow. Cauliflower cheese edam paneer everyone loves cauliflower cheese who moved my cheese pepper jack boursin. Airedale mozzarella cheese strings blue castello cauliflower cheese cheese on toast cream cheese cheese strings. Croque monsieur say cheese cheesecake.</p>
+         </div>
+         <div class="column" style="background-color:#cdf5d4;">
+            <h2>II</h2>
+            <p>Roquefort melted cheese st. agur blue cheese. Pecorino cream cheese bavarian bergkase melted cheese smelly cheese cheese and wine cut the cheese cheddar. Parmesan cheese on toast ricotta brie mozzarella feta chalk and cheese when the cheese comes out everybody's happy. Bocconcini cheese and biscuits bocconcini pepper jack taleggio the big cheese chalk and cheese melted cheese. Caerphilly mozzarella bocconcini mozzarella.</p>
+         </div>
+      </div>
+      <div class="row">
+         <div class="column" style="background-color:#ba8aff;">
+            <h2>III</h2>
+            <p>Gouda who moved my cheese melted cheese. Bavarian bergkase feta danish fontina cottage cheese gouda the big cheese gouda when the cheese comes out everybody's happy. Cheeseburger croque monsieur when the cheese comes out everybody's happy caerphilly bavarian bergkase bavarian bergkase cut the cheese ricotta. Cheese and biscuits babybel cream cheese roquefort edam airedale pepper jack mozzarella. Goat cheesecake.</p>
+         </div>
+         <div class="column" style="background-color:#ede2f5;">
+            <h2>IV</h2>
+            <p>Bavarian bergkase pecorino emmental. Chalk and cheese cheese slices queso cheese on toast port-salut cheesy feet babybel cheese and wine. Say cheese chalk and cheese cheese strings who moved my cheese brie cheesy feet port-salut port-salut. Goat paneer cheesy grin the big cheese edam edam bocconcini cauliflower cheese. Cheese triangles the big cheese.</p>
+         </div>
+      </div>
+      <script>
+         // Get the elements with class="column"
+         var elements = document.getElementsByClassName("column");
 
-@font-face {
-  font-family: myCustomFont;
-  src: url(Montserrat/Montserrat-Medium.otf);
-}
+         // Declare a loop variable
+         var i;
 
-/* Style the body */
-body {
-  font-family: myCustomFont;
-  font-size: 20px;
-  margin: 0;
-}
+         // List View
+         function listView() {
+           for (i = 0; i < elements.length; i++) {
+             elements[i].style.width = "100%";
+           }
+         }
 
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  font-size: 14px
-}
+         // Grid View
+         function gridView() {
+           for (i = 0; i < elements.length; i++) {
+             elements[i].style.width = "50%";
+           }
+         }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* Style the buttons */
-.btn {
-  font-family: myCustomFont;
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  background-color: #f1f1f1;
-  cursor: pointer;
-}
+         /* Optional: Add active class to the current button (highlight it) */
+         var container = document.getElementById("btnContainer");
+         var btns = container.getElementsByClassName("btn");
+         for (var i = 0; i < btns.length; i++) {
+           btns[i].addEventListener("click", function() {
+             var current = document.getElementsByClassName("active");
+             current[0].className = current[0].className.replace(" active", "");
+             this.className += " active";
+           });
+         }
+      </script>
 
-.btn:hover {
-  background-color: #ddd;
-}
-
-.btn.active {
-  background-color: #666;
-  color: white;
-}
-</style>
-</head>
-<body>
-
-<h2>List View or Grid View</h2>
-
-<p>Click on a button to choose list view or grid view.</p>
-
-<div id="btnContainer">
-  <button class="btn" onclick="listView()"><i class="fa fa-bars"></i> List</button>
-  <button class="btn active" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
-</div>
-<br>
-
-<div class="row">
-  <div class="column" style="background-color:#43edac;">
-    <h2>I</h2>
-    <p>Cheese on toast squirty cheese brie. Blue castello cut the cheese danish fontina rubber cheese boursin roquefort rubber cheese cow. Cauliflower cheese edam paneer everyone loves cauliflower cheese who moved my cheese pepper jack boursin. Airedale mozzarella cheese strings blue castello cauliflower cheese cheese on toast cream cheese cheese strings. Croque monsieur say cheese cheesecake.</p>
-  </div>
-  <div class="column" style="background-color:#cdf5d4;">
-    <h2>II</h2>
-    <p>Roquefort melted cheese st. agur blue cheese. Pecorino cream cheese bavarian bergkase melted cheese smelly cheese cheese and wine cut the cheese cheddar. Parmesan cheese on toast ricotta brie mozzarella feta chalk and cheese when the cheese comes out everybody's happy. Bocconcini cheese and biscuits bocconcini pepper jack taleggio the big cheese chalk and cheese melted cheese. Caerphilly mozzarella bocconcini mozzarella.</p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="column" style="background-color:#ba8aff;">
-    <h2>III</h2>
-    <p>Gouda who moved my cheese melted cheese. Bavarian bergkase feta danish fontina cottage cheese gouda the big cheese gouda when the cheese comes out everybody's happy. Cheeseburger croque monsieur when the cheese comes out everybody's happy caerphilly bavarian bergkase bavarian bergkase cut the cheese ricotta. Cheese and biscuits babybel cream cheese roquefort edam airedale pepper jack mozzarella. Goat cheesecake.</p>
-  </div>
-  <div class="column" style="background-color:#ede2f5;">
-    <h2>IV</h2>
-    <p>Bavarian bergkase pecorino emmental. Chalk and cheese cheese slices queso cheese on toast port-salut cheesy feet babybel cheese and wine. Say cheese chalk and cheese cheese strings who moved my cheese brie cheesy feet port-salut port-salut. Goat paneer cheesy grin the big cheese edam edam bocconcini cauliflower cheese. Cheese triangles the big cheese.</p>
-  </div>
-</div>
-
-<script>
-// Get the elements with class="column"
-var elements = document.getElementsByClassName("column");
-
-// Declare a loop variable
-var i;
-
-// List View
-function listView() {
-  for (i = 0; i < elements.length; i++) {
-    elements[i].style.width = "100%";
-  }
-}
-
-// Grid View
-function gridView() {
-  for (i = 0; i < elements.length; i++) {
-    elements[i].style.width = "50%";
-  }
-}
-
-/* Optional: Add active class to the current button (highlight it) */
-var container = document.getElementById("btnContainer");
-var btns = container.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-</script>
-<script>
-  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="yg9SWXMqQrvcvm5og2wyxiomzZ9QkMAf";analytics.SNIPPET_VERSION="4.13.2";
-  analytics.load("yg9SWXMqQrvcvm5og2wyxiomzZ9QkMAf");
-  analytics.page();
-  analytics.identify("SegmentUser4", {
-    name: "Jocelyn"
-  });
-  analytics.group('SegmentGroup1', {
-    name: "Jocelyn"
-      });
-    }}();
-</script>
-</body>
+   </body>
 </html>
