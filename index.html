@@ -3,16 +3,25 @@
 <head>
   <script src="firstfile.js"></script>
   <script>
-    //var random_number = Math.floor(Math.random()*500000+100000);
-    //var accountArray= ["Clovis_Bray_Corporation", "Ishtar_Collective", "Operation_Babydog"];
-    //var random_account= accountArray[Math.floor(Math.random()*accountArray.length)];
-    // if using the three above to randomize accounts, be sure to update account id below
-    (function(apiKey){
-        (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
-        v=['initialize','identify','updateOptions','pageLoad','track'];for(w=0,x=v.length;w<x;++w)(function(m){
-            o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
-            y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
-            z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+    (function(apiKey) {
+        (function(p, e, n, d, o) {
+            var v, w, x, y, z;
+            o = p[d] = p[d] || {};
+            o._q = [];
+            v = ['initialize', 'identify', 'updateOptions', 'pageLoad', 'track'];
+            for (w = 0, x = v.length; w < x; ++w)
+              (function(m) {
+                o[m] = o[m] || function() {
+                    o._q[m === v[0] ? 'unshift' :  'push']([m].concat([].slice.call(arguments, 0)));
+                };
+            })(v[w]);
+            y = e.createElement(n);
+            y.async = !0;
+
+            y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
+            z = e.getElementsByTagName(n)[0];
+            z.parentNode.insertBefore(y, z);
+        })(window, document, 'script', 'pendo');
 
             // Call this whenever information about your visitors becomes available
             // Please use Strings, Numbers, or Bools for value types.
@@ -27,22 +36,11 @@
                     //boolean:      user_boolean
                     //date1:        user_date1
                     //date2:        user_date2
-
-                    // You can add any additional visitor level key-values here,
-                    // as long as it's not one of the above reserved names.
                 },
 
                 account: {
                     id:           user_account_id, // Highly recommended
                     type:         "AccountType"// Optional
-                    // is_paying:    'true' // Recommended if using Pendo Feedback
-                    // monthly_value: '2.49' // Recommended if using Pendo Feedback
-                    // planLevel:    // Optional
-                    // planPrice:    // Optional
-                    // creationDate: // Optional
-
-                    // You can add any additional account level key-values here,
-                    // as long as it's not one of the above reserved names.
                 },
 
                 parentAccount: {
@@ -53,6 +51,10 @@
             });
     })('a93e68a6-46fd-443a-699f-aa31985c066d');
 </script>
+
+<script id = "ze-snippet" src = "https://static.zdassets.com/ekr/snippet.js?key=2e7dd840-8a9a-484f-8af0-8802bc2d3d2b"> </script>
+
+
 <!--
 <script>
   !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.13.1";
@@ -64,7 +66,9 @@
   analytics.group('SegmentGroup', {
 });
   }}();
-</script>-->
+</script>
+-->
+
 <title>Alisyn's Playground</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">

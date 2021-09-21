@@ -308,20 +308,31 @@ body {
 <button onclick="location.href = 'https://destiny.fandom.com/wiki/Stormcaller';" id="myButton" class="btn arc">TITAN SMASSSHHHH</button>
 <button onclick="location.href = 'https://destiny.fandom.com/wiki/Voidwalker';" id="myButton" class="btn void">Bubblesss</button>
 <button onclick="location.href = 'https://destiny.fandom.com/wiki/Dawnblade';" id="myButton" class="btn solar">Fire Bad, Tree Pretty</button>
-
-<!-- Hold onto ths for later
-<button id="myButton" class="float-left submit-button" >Home</button>
-
-<script type="text/javascript">
-    document.getElementById("myButton").onclick = function () {
-        location.href = "www.yoursite.com";
-    };
+<br>
+<br>
+<h4>MultipleElementTest Guide</h4>
+<button onclick="location.href = '#';" id="MultipleElementTest" class="btn void">Button</button>
+<button onclick="location.href = '#';" id="MultipleElementTest" class="btn void">Same Button</button>
+<button onclick="location.href = '#';" id="MultipleElementTest" class="btn void">Same Button Again</button>
+<br>
+<h4>Checkbox Tests</h4>
+<label for="myCheck">Check yo'self
+<input type="checkbox" id="myCheck" onclick="checkboxText()">
+<div id="text" style="display:none">before you wreck yo'self</div>
+</label>
+<script>
+function checkboxText() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
 </script>
--->
-
-
-    <br>    <br>
-    <button onclick="location.href = 'https://www.bungie.com';" id="myButton" class="btn red">Bungo</button>
+<br>
+<button onclick="location.href = 'https://www.bungie.com';" id="myButton" class="btn red">Bungo</button>
 <button onclick="location.href = 'https://www.d2checklist.com';" id="myButton" class="btn green">D2Checklist</button>
 <button onclick="location.href = 'https://www.destinyitemmanager.com';" id="myButton" class="btn default">DIM</button>
 </div>
