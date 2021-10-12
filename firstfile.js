@@ -12,11 +12,20 @@ var user_boolean = true;
 var user_id = 'AnaBray';
 var user_email = 'alisyn.collins+2@gmail.com';
 var user_full_name = 'Ana Bray';
+var user_account_id = 'AccountExcludeTest';
+var user_language = 'en_GB';
+var user_random_data = 'AccountExcludeTest';
+var user_boolean = 1;
+
+/*
+var user_id = 'AnaBray';
+var user_email = 'alisyn.collins+2@gmail.com';
+var user_full_name = 'Ana Bray';
 var user_account_id = 'Clovis_Bray_Corporation';
 var user_language = 'en_GB';
 var user_random_data = 'ThisIsNewData';
 var user_boolean = 0;
-
+*/
 //var user_date1 = '2020-03-27T00:00:00.000000Z';
 //var user_date2 = '2018-03-27T00:08:21.940412Z'
 
