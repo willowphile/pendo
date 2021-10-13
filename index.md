@@ -277,10 +277,7 @@ label::before {
 <link rel="shortcut icon" type="image/jpg" href="engram.ico"/>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKHRP5F"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+
 <div class="header">
   <h1>Hello</h1>
   <p>I am a website</p>
