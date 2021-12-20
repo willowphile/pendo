@@ -3,6 +3,14 @@
 <head>
   <script src="firstfile.js"></script>
   <script>
+    function annotateUrl() {
+      var toDrop = ['titan'];
+      var toAdd = { wellActually: 'CRAYONS' };
+      return {
+        include: toAdd
+      };};
+    </script>
+  <script>
     (function(apiKey) {
         (function(p, e, n, d, o) {
             var v, w, x, y, z;
@@ -48,7 +56,8 @@
                     id:           'Bungie',
                     name:         'Bungo',
                     parentAccountOnly: 'yes'
-                  }
+                  },
+                  annotateUrl: annotateUrl
             });
     })('a93e68a6-46fd-443a-699f-aa31985c066d');
 </script>
@@ -287,6 +296,7 @@ label::before {
   <a href="cats.html" class="right">Cats</a>
   <a href="analytics.html" class="right">Data</a>
   <a href="Darkness.html" class="right">Dark</a>
+  <a href="training.html">Training</a>
 </div>
 
 <div class="row">
