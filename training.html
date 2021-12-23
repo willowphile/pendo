@@ -3,8 +3,10 @@
 
 <head>
     <script src="firstfile.js"></script>
-    <script src="https://cdn.pendo.io/agent/releases/2.117.0/pendo.xhr.js" integrity="sha384-pXACrHMY7B+cLM82XTJhyFFG7Th7bRzmPXKVLsiG2rarBVH+5R/S1QX8g+FBqnr2" crossorigin="anonymous"></script>
-    <!--     <script>
+    <!--     
+        <script src="https://cdn.pendo.io/agent/releases/2.117.0/pendo.xhr.js" integrity="sha384-pXACrHMY7B+cLM82XTJhyFFG7Th7bRzmPXKVLsiG2rarBVH+5R/S1QX8g+FBqnr2" crossorigin="anonymous"></script>
+ -->
+    <script>
         (function (apiKey) {
             (function (p, e, n, d, o) {
                 var v, w, x, y, z;
@@ -24,38 +26,33 @@
                 z = e.getElementsByTagName(n)[0];
                 z.parentNode.insertBefore(y, z);
             })(window, document, 'script', 'pendo');
-
-            // Call this whenever information about your visitors becomes available
-            // Please use Strings, Numbers, or Bools for value types.
-            pendo.initialize({
-                //excludeAllText: true,
-                //DisableGuides: True,
-                visitor: {
-                    id: user_id,   // Required if user is logged in
-                    email: user_email, // Recommended if using Pendo Feedback, or NPS Email
-                    full_name: user_full_name,// Recommended if using Pendo Feedback
-                    language: "en_GB",
-                    random: user_random_data
-                    //boolean:      user_boolean
-                    //date1:        user_date1
-                    //date2:        user_date2
-                },
-
-                account: {
-                    id: "user_account_id", // Highly recommended
-                    type: "AccountType"// Optional
-                },
-
-                parentAccount: {
-                    id: 'Bungie',
-                    name: 'Bungo',
-                    parentAccountOnly: 'yes'
-                }
-            });
         })('a93e68a6-46fd-443a-699f-aa31985c066d');
-    </script> -->
+    </script>
 
     <script>
+        pendo.initialize({
+            visitor: {
+                id: user_id,   // Required if user is logged in
+                email: user_email, // Recommended if using Pendo Feedback, or NPS Email
+                full_name: user_full_name,// Recommended if using Pendo Feedback
+                language: "en_GB",
+                random: user_random_data
+            },
+
+            account: {
+                id: "user_account_id", // Highly recommended
+                type: "AccountType"// Optional
+            },
+
+            parentAccount: {
+                id: 'Bungie',
+                name: 'Bungo',
+                parentAccountOnly: 'yes'
+            }
+        });
+    </script>
+
+    <!--    <script>
         (function (apiKey, agentUrl, agentSri) {
             (function (window, document, tagname, namespace, pendo) {
                 var methods, index, length, script, calls;
@@ -113,11 +110,11 @@
             // Used to fetch the `config.json` for the specified API key and nothing else
             'a93e68a6-46fd-443a-699f-aa31985c066d',
             // The full URL to the standalone agent version, either on `cdn.pendo.io` or self-hosted
-            'https://cdn.pendo.io/agent/releases/2.117.0/pendo.xhr.js',
+            'https://pendo-io-static.storage.googleapis.com/agent/releases/2.117.0/pendo.xhr.min.js',
             // Calculated SRI hash prepended with the hashing method used, typically SHA384
-            'sha384-pXACrHMY7B+cLM82XTJhyFFG7Th7bRzmPXKVLsiG2rarBVH+5R/S1QX8g+FBqnr2'
+            'sha384-cMPiSRWuIQNZ1DVprcgearMfhTI6lChW1pHqrpfBjT+ugqSqr8gOgAG4VD1ivlKB'
         );
-    </script>
+    </script> -->
     <script>
         function on() {
             document.getElementById("overlay").style.display = "block";
