@@ -40,7 +40,7 @@
             },
 
             account: {
-                id: "user_account_id", // Highly recommended
+                id: user_account_id, // Highly recommended
                 type: "AccountType"// Optional
             },
 
@@ -52,7 +52,8 @@
         });
     </script>
 
-    <!--    <script>
+    <!--    
+        <script>
         (function (apiKey, agentUrl, agentSri) {
             (function (window, document, tagname, namespace, pendo) {
                 var methods, index, length, script, calls;
@@ -114,7 +115,8 @@
             // Calculated SRI hash prepended with the hashing method used, typically SHA384
             'sha384-cMPiSRWuIQNZ1DVprcgearMfhTI6lChW1pHqrpfBjT+ugqSqr8gOgAG4VD1ivlKB'
         );
-    </script> -->
+    </script> 
+-->
     <script>
         function on() {
             document.getElementById("overlay").style.display = "block";
@@ -128,210 +130,9 @@
     <title>Alisyn's Training Site</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
     <style>
-        * {
-            box-sizing: border-box;
-            font-family: myCustomFont;
-        }
-
-        @font-face {
-            font-family: myCustomFont;
-            src: url(Montserrat/Montserrat-Medium.otf);
-        }
-
-        /* Style the body */
-        body {
-            font-family: myCustomFont;
-            font-size: 20px;
-            margin: 0;
-        }
-
-        /* Header/logo Title */
-        .header {
-            padding: 80px;
-            text-align: center;
-            background: #0f029a;
-            color: white;
-        }
-
-        /* Increase the font size of the heading */
-        .header h1 {
-            font-family: myCustomFont;
-            font-size: 40px;
-        }
-
-        .body h3 {
-            font-family: myCustomFont;
-            font-size: 20px;
-        }
-
-        /* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
-        .navbar {
-            overflow: hidden;
-            background-color: #333;
-            position: sticky;
-            position: -webkit-sticky;
-            top: 0;
-        }
-
-        /* Style the navigation bar links */
-        .navbar a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
-
-
-        /* Right-aligned link */
-        .navbar a.right {
-            float: right;
-        }
-
-        /* Change color on hover */
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        /* Active/current link */
-        .navbar a.active {
-            background-color: #666;
-            color: white;
-        }
-
-        /* Column container */
-        .row {
-            display: -ms-flexbox;
-            /* IE10 */
-            display: flex;
-            -ms-flex-wrap: wrap;
-            /* IE10 */
-            flex-wrap: wrap;
-        }
-
-        /* Create two unequal columns that sits next to each other */
-        /* Sidebar/left column */
-        .side {
-            -ms-flex: 30%;
-            /* IE10 */
-            flex: 30%;
-            background-color: #f1f1f1;
-            padding: 20px;
-        }
-
-        /*buttons */
-        .btn {
-            border: none;
-            background-color: inherit;
-            padding: 14px 28px;
-            font-family: myCustomFont;
-            font-size: 16px;
-            cursor: pointer;
-            display: inline-block;
-        }
-
-
-        /* Green */
-        .green {
-            color: green;
-        }
-
-        .green:hover {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        /* Blue */
-        .arc {
-            color: dodgerblue;
-        }
-
-        .arc:hover {
-            background: #2196F3;
-            color: white;
-        }
-
-        /* Orange */
-        .solar {
-            color: orange;
-        }
-
-        .solar:hover {
-            background: #ff9800;
-            color: white;
-        }
-
-        /* Purple */
-        .void {
-            color: purple;
-        }
-
-        .void:hover {
-            background: purple;
-            color: white;
-        }
-
-        /* Black */
-        .default {
-            color: black;
-        }
-
-        .default:hover {
-            background: #D3D3D3;
-            color: white;
-        }
-
-        /* Red */
-        .red {
-            color: red;
-        }
-
-        .red:hover {
-            background: #ff0000;
-            color: white;
-        }
-
-        /* Main column */
-        .main {
-            -ms-flex: 70%;
-            /* IE10 */
-            flex: 70%;
-            background-color: white;
-            padding: 20px;
-        }
-
-        /* Fake image, just for this example */
-        .fakeimg {
-            background-color: #aaa;
-            width: 100%;
-            padding: 20px;
-        }
-
-        /* Footer */
-        .footer {
-            padding: 20px;
-            text-align: center;
-            background: #ddd;
-        }
-
-        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 700px) {
-            .row {
-                flex-direction: column;
-            }
-        }
-
-        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-        @media screen and (max-width: 400px) {
-            .navbar a {
-                float: none;
-                width: 100%;
-            }
-        }
-
+        
         .hide {
             display: none;
         }
@@ -357,8 +158,6 @@
             appearance: button;
             outline: none;
         }
-
-
 
         .box select option {
             padding: 30px;
@@ -467,14 +266,21 @@
     </div>
 
     <div class="navbar">
-        <a href="index.html">Main</a>
+        <a href="index.html"">Home</a>
         <a href="warlock.html">Warlock</a>
         <a href="hunter.html">Hunter</a>
         <a href="titan.html">Crayon-eater</a>
+        <div class="dropdown">
+          <button class="dropbtn">Special Installs</button>
+          <div class="dropdown-content">
+            <a href="segment.html">Segment</a>
+            <a href="gtm.html">GTM</a>
+          </div>
+        </div>
         <a href="cats.html" class="right">Cats</a>
-        <a href="analytics.html" class="right">Data</a>
         <a href="Darkness.html" class="right">Dark</a>
-    </div>
+        <a href="training.html" class="right">Training</a>
+      </div>
 
     <div class="row">
         <div class="side">
@@ -482,7 +288,7 @@
             <img src="rainbowEmblem.png" width="300"><br>
             <img src="catEmblem.png" width="300"><br>
             <img src="heartEmblem.png" width="300"><br>
-            <br>
+          labels."pendo.io/job_type"="NPSEmail"  <br>
             <SCRIPT LANGUAGE="JAVASCRIPT">
 
                 var r_text = new Array();
@@ -630,9 +436,113 @@
                         console.log("Visitor-level agent metadata field 'random' changed to " + inputVal + ". try running a validateInstall()");
                     }
                 </script>
+                <br>
+                Enter a new visitorId: <input type="text" id="visitorField1" value="testVisitor1"
+                    style='border:solid 1px black;height: 40px;vertical-align: middle;'>
+
+                <button onclick="identifyNewVisitor()" class="btn void"
+                    style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>identify!</button>
+                <script type="text/javascript">
+                    function identifyNewVisitor() {
+                        pendo.identify({
+                            visitor: {
+                                id: document.getElementById("visitorField1").value,
+                                random: "autoGenerated"
+                            }
+                        });
+                    }
+                </script>
+
             </div>
-            <p id="pageAnchor" style=font-size:8px;float:right>This is where that page anchor button goes.</p>
+
+            <hr>
+            <br>
+            <div>
+                <h2>URL Shenanigans</h2>
+
+                Enter the name you want this page to be: <input type="text" id="setUrlField" value="boringWebPageName"
+                    style='border:solid 1px black;height: 40px;vertical-align: middle;'>
+                <button onclick="updateUrl()" class="btn arc" id="updateUrlButton"
+                    style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>update!</button>
+
+                <script type="text/javascript">
+                    function updateUrl() {
+                        var urlVal = document.getElementById("setUrlField").value;
+                        pendo.location.setUrl('http://your.webpage.com/' + urlVal);
+                        console.log("URL has been updated to " + urlVal + ". try running a normalizedUrl command");
+                    }
+                </script>
+            </div>
+            <hr>
+            <br>
+            <div>
+                <h2>Random script testing</h2>
+
+                Click me to run the script below: <button onclick="randoScript()" class="btn arc" id="randoTester"
+                    style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>test
+                    me!</button>
+
+                <!-- put your script here and in the script tags below so you know what you're actually testing  -->
+                <xmp style='font-size: 10px;'>
+                    <script type="text/javascript">
+                        function randoScript() {
+                            if (!pendo.findGuideById('FKNx728NxiwFP1u-Z0lx0J_iF34')) {
+                                // if guide not in payload, exit
+                                console.log('step 1 good');
+                                return;
+                            }
+
+                            if (!pendo.findGuideById('FKNx728NxiwFP1u-Z0lx0J_iF34').hasBeenSeen()) {
+                                // if guide has been seen, exit
+                                // but i'm going to change this to ! for testing
+                                console.log('step 2 good');
+                                return;
+                            }
+
+                            setTimeout(() => {
+                                if (pendo.isGuideShown()) {
+                                    // if a guide is already being shown, exit
+                                    console.log('step 3 good');
+                                    return;
+                                }
+
+                                pendo.findGuideById('FKNx728NxiwFP1u-Z0lx0J_iF34').launch();
+                            }, console.log('something bad happened'));
+                        }
+                    </script>
+                </xmp>
+
+                <!-- put your script here, and don't forget to paste the code in the xmp tags above, too -->
+                <script type="text/javascript">
+                    function randoScript() {
+                        if (!pendo.findGuideById('FKNx728NxiwFP1u-Z0lx0J_iF34')) {
+                            // if guide not in payload, exit
+                            console.log('step 1 good');
+                            return;
+                        }
+
+                        if (pendo.findGuideById('FKNx728NxiwFP1u-Z0lx0J_iF34').hasBeenSeen()) {
+                            // if guide has been seen, exit
+                            // but i'm going to change this to ! for testing
+                            console.log('step 2 good');
+                            return;
+                        }
+
+                        setTimeout(() => {
+                            if (pendo.isGuideShown()) {
+                                // if a guide is already being shown, exit
+                                console.log('step 3 good');
+                                return;
+                            }
+
+                            pendo.findGuideById('FKNx728NxiwFP1u-Z0lx0J_iF34').launch();
+                        }, console.log('something bad happened'));
+                    }
+                </script>
+            </div>
         </div>
+        <p id="pageAnchor" style=font-size:8px;float:right>This is where that page anchor button goes.</p>
+    </div>
     </div>
 
     <div class="footer">
