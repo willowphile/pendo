@@ -1,4 +1,12 @@
 
+var user_id = 'Savathûn';
+var user_email = 'alisyn.collins+savathun@gmail.com';
+var user_full_name = 'Savathun, the Witch Queen';
+var user_account_id = 'Hive';
+var user_language = 'en_GB';
+var user_random_data = 'Subjugant to None';
+var user_boolean = true;
+
 /*
 var user_id = 'IkoraRey';
 var user_email = 'alisyn.collins+3@gmail.com';
@@ -9,6 +17,7 @@ var user_random_data = '';
 var user_boolean = true;
 */
 
+/*
 var user_id = 'AnaBray';
 var user_email = 'alisyn.collins+2@gmail.com';
 var user_full_name = 'Ana Bray';
@@ -16,6 +25,7 @@ var user_account_id = 'AccountExcludeTest1';
 var user_language = 'en_GB';
 var user_random_data = 'AccountExcludeTest';
 var user_boolean = 1;
+*/
 
 /*
 var user_id = 'AnaBray';
