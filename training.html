@@ -475,6 +475,34 @@
             <hr>
             <br>
             <div>
+                <h2>The One Ring of textboxes</h2>
+
+                <input type="text" id="textFocus" value="all eyes on me"
+                    style='border:solid 1px black;height: 40px; width = 400px; vertical-align: middle;'>
+
+                <p>Once you click on this text field, it will hold focus until the page is refreshed or you kill the event listener.</p>
+
+
+                <script>
+                    var x = document.getElementById("textFocus");
+                    x.addEventListener("focus", myFocusFunction, true);
+                    x.addEventListener("blur", myBlurFunction, true);
+
+                    function myFocusFunction() {
+                        document.getElementById("textFocus").value = "I have the focus now. Try clicking away.";
+                    }
+
+                    function myBlurFunction() {
+                        document.getElementById("textFocus").onblur = this.focus();
+                        document.getElementById("textFocus").value = "there is no escape";
+                        document.getElementById("textFocus").style.background = "#eb9a9a";
+                    }
+                </script>
+
+            </div>
+            <hr>
+            <br>
+            <div>
                 <h2>Random script testing</h2>
 
                 Click me to run the script below: <button onclick="randoScript()" class="btn arc" id="randoTester"
@@ -542,7 +570,7 @@
         </div>
         <p id="pageAnchor" style=font-size:8px;float:right>This is where that page anchor button goes.</p>
     </div>
-    </div>
+
 
     <div class="footer">
         <h2>Helpful Links</h2>
