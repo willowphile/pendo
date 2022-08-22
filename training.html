@@ -3,45 +3,31 @@
 
 <head>
     <script src="firstfile.js"></script>
-    <!--     
-        <script src="https://cdn.pendo.io/agent/releases/2.117.0/pendo.xhr.js" integrity="sha384-pXACrHMY7B+cLM82XTJhyFFG7Th7bRzmPXKVLsiG2rarBVH+5R/S1QX8g+FBqnr2" crossorigin="anonymous"></script>
- -->
     <script>
         (function (apiKey) {
             (function (p, e, n, d, o) {
-                var v, w, x, y, z;
-                o = p[d] = p[d] || {};
-                o._q = [];
-                v = ['initialize', 'identify', 'updateOptions', 'pageLoad', 'track'];
-                for (w = 0, x = v.length; w < x; ++w)
-                    (function (m) {
-                        o[m] = o[m] || function () {
-                            o._q[m === v[0] ? 'unshift' : 'push']([m].concat([].slice.call(arguments, 0)));
-                        };
-                    })(v[w]);
-                y = e.createElement(n);
-                y.async = !0;
-
-                y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
-                z = e.getElementsByTagName(n)[0];
-                z.parentNode.insertBefore(y, z);
+                var v, w, x, y, z; o = p[d] = p[d] || {}; o._q = o._q || [];
+                v = ['initialize', 'identify', 'updateOptions', 'pageLoad', 'track']; for (w = 0, x = v.length; w < x; ++w)(function (m) {
+                    o[m] = o[m] || function () { o._q[m === v[0] ? 'unshift' : 'push']([m].concat([].slice.call(arguments, 0))); };
+                })(v[w]);
+                y = e.createElement(n); y.async = !0; y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
+                z = e.getElementsByTagName(n)[0]; z.parentNode.insertBefore(y, z);
             })(window, document, 'script', 'pendo');
         })('a93e68a6-46fd-443a-699f-aa31985c066d');
     </script>
-
     <script>
         pendo.initialize({
             visitor: {
-                id: user_id,   // Required if user is logged in
-                email: user_email, // Recommended if using Pendo Feedback, or NPS Email
-                full_name: user_full_name,// Recommended if using Pendo Feedback
+                id: user_id,
+                email: user_email,
+                full_name: user_full_name,
                 language: "en_GB",
                 random: user_random_data
             },
 
             account: {
-                id: user_account_id, // Highly recommended
-                type: "AccountType"// Optional
+                id: user_account_id,
+                type: "AccountType"
             },
 
             parentAccount: {
@@ -51,72 +37,71 @@
             }
         });
     </script>
-
     <!--    
-        <script>
-        (function (apiKey, agentUrl, agentSri) {
-            (function (window, document, tagname, namespace, pendo) {
-                var methods, index, length, script, calls;
-                pendo = window[namespace] = window[namespace] || {};
-                methods = ["initialize", "identify", "updateOptions", "pageLoad"];
-                for (calls = pendo._q = [], index = 0, length = methods.length; index < length; ++index)
-                    (function shim(method) {
-                        pendo[method] = pendo[method] || function () {
-                            calls[method === methods[0] ? "unshift" : "push"](
-                                [].concat.apply([method], arguments)
-                            );
-                        };
-                    })(methods[index]);
-                script = document.createElement(tagname);
-                script.async = !0;
-                script.crossorigin = "anonymous";
-                agentSri && (script.integrity = agentSri);
-                script.src = agentUrl;
-                document.head.appendChild(script);
-            })(window, document, 'script', 'pendo')
-
-            /**
-               * Queue external config prior to handling `identify` call, since `initialize`
-               * calls are prepended to the call queue (pendo._q)
-               */
-            pendo.initialize('//cdn.pendo.io/agent/static/' + apiKey + '/config.json');
-            /**
-             * Call `pendo.identify` to supply visitor and account metadata instead of
-             * the usual `initialize` call.
-             */
-            pendo.identify({
-                visitor: {
-                    id: user_id,   // Required if user is logged in
-                    email: user_email, // Recommended if using Pendo Feedback, or NPS Email
-                    full_name: user_full_name,// Recommended if using Pendo Feedback
-                    language: "en_GB",
-                    random: user_random_data
-                    //boolean:      user_boolean
-                    //date1:        user_date1
-                    //date2:        user_date2
-                },
-
-                account: {
-                    id: user_account_id, // Highly recommended
-                    type: "AccountType"// Optional
-                },
-
-                parentAccount: {
-                    id: 'Bungie',
-                    name: 'Bungo',
-                    parentAccountOnly: 'yes'
-                }
-            });
-        })(
-            // Used to fetch the `config.json` for the specified API key and nothing else
-            'a93e68a6-46fd-443a-699f-aa31985c066d',
-            // The full URL to the standalone agent version, either on `cdn.pendo.io` or self-hosted
-            'https://pendo-io-static.storage.googleapis.com/agent/releases/2.117.0/pendo.xhr.min.js',
-            // Calculated SRI hash prepended with the hashing method used, typically SHA384
-            'sha384-cMPiSRWuIQNZ1DVprcgearMfhTI6lChW1pHqrpfBjT+ugqSqr8gOgAG4VD1ivlKB'
-        );
-    </script> 
--->
+            <script>
+            (function (apiKey, agentUrl, agentSri) {
+                (function (window, document, tagname, namespace, pendo) {
+                    var methods, index, length, script, calls;
+                    pendo = window[namespace] = window[namespace] || {};
+                    methods = ["initialize", "identify", "updateOptions", "pageLoad"];
+                    for (calls = pendo._q = [], index = 0, length = methods.length; index < length; ++index)
+                        (function shim(method) {
+                            pendo[method] = pendo[method] || function () {
+                                calls[method === methods[0] ? "unshift" : "push"](
+                                    [].concat.apply([method], arguments)
+                                );
+                            };
+                        })(methods[index]);
+                    script = document.createElement(tagname);
+                    script.async = !0;
+                    script.crossorigin = "anonymous";
+                    agentSri && (script.integrity = agentSri);
+                    script.src = agentUrl;
+                    document.head.appendChild(script);
+                })(window, document, 'script', 'pendo')
+            
+                /**
+                   * Queue external config prior to handling `identify` call, since `initialize`
+                   * calls are prepended to the call queue (pendo._q)
+                   */
+                pendo.initialize('//cdn.pendo.io/agent/static/' + apiKey + '/config.json');
+                /**
+                 * Call `pendo.identify` to supply visitor and account metadata instead of
+                 * the usual `initialize` call.
+                 */
+                pendo.identify({
+                    visitor: {
+                        id: user_id,   // Required if user is logged in
+                        email: user_email, // Recommended if using Pendo Feedback, or NPS Email
+                        full_name: user_full_name,// Recommended if using Pendo Feedback
+                        language: "en_GB",
+                        random: user_random_data
+                        //boolean:      user_boolean
+                        //date1:        user_date1
+                        //date2:        user_date2
+                    },
+            
+                    account: {
+                        id: user_account_id, // Highly recommended
+                        type: "AccountType"// Optional
+                    },
+            
+                    parentAccount: {
+                        id: 'Bungie',
+                        name: 'Bungo',
+                        parentAccountOnly: 'yes'
+                    }
+                });
+            })(
+                // Used to fetch the `config.json` for the specified API key and nothing else
+                'a93e68a6-46fd-443a-699f-aa31985c066d',
+                // The full URL to the standalone agent version, either on `cdn.pendo.io` or self-hosted
+                'https://pendo-io-static.storage.googleapis.com/agent/releases/2.117.0/pendo.xhr.min.js',
+                // Calculated SRI hash prepended with the hashing method used, typically SHA384
+                'sha384-cMPiSRWuIQNZ1DVprcgearMfhTI6lChW1pHqrpfBjT+ugqSqr8gOgAG4VD1ivlKB'
+            );
+            </script> 
+            -->
     <script>
         function on() {
             document.getElementById("overlay").style.display = "block";
@@ -258,15 +243,13 @@
 </head>
 
 <body>
-
     <div class="header">
         <h1>Oh hai</h1>
         <p>I am a website</p>
     </div>
-
     <div class="navbar">
         <a href="index.html"">Home</a>
-        <a href=" warlock.html">Warlock</a>
+            <a href=" warlock.html">Warlock</a>
         <a href="hunter.html">Hunter</a>
         <a href="titan.html">Crayon-eater</a>
         <div class="dropdown">
@@ -280,7 +263,6 @@
         <a href="Darkness.html" class="right">Dark</a>
         <a href="training.html" class="right active">Training</a>
     </div>
-
     <div class="row">
         <div class="side">
             <h2>Stuff</h2>
@@ -288,130 +270,180 @@
             <img src="catEmblem.png" width="300"><br>
             <img src="heartEmblem.png" width="300"><br>
             <br>
-            <SCRIPT LANGUAGE="JAVASCRIPT">
-
-                var r_text = new Array();
-                r_text[0] = "Lorem ipsum nightstalker fatebringer.";
-                r_text[1] = "Lorem ipsum witherhoard ikelos.";
-                r_text[2] = "Lorem ipsum stasis thunderlord.";
-
-                var i = Math.floor(r_text.length * Math.random());
-
-                document.write(r_text[i]);
-
-            </script>
             <p>
+                This is randomized text.
+                -
+                <SCRIPT LANGUAGE="JAVASCRIPT">
+                    var r_text = new Array();
+                    r_text[0] = "Lorem ipsum nightstalker fatebringer.";
+                    r_text[1] = "Lorem ipsum witherhoard ikelos.";
+                    r_text[2] = "Lorem ipsum stasis thunderlord.";
+
+                    var i = Math.floor(r_text.length * Math.random());
+
+                    document.write(r_text[i]);
+
+                </script>
+            </p>
+            <p>
+                The current time is:
                 <span id="datetime"></span>
             </p>
             <script>
                 var dt = new Date();
                 document.getElementById("datetime").innerHTML = dt.toLocaleString();
             </script>
+            <a href="#buttonAnchor">Click Attribution</a><br>
+            <a href="#dropdownAnchor">Click Event Properties</a><br>
+            <a href="#modalsAnchor">Overlays and Modals!</a><br>
+            <a href="#identifyAnchor">updateOptions and identify</a><br>
+            <a href="#locationAPIAnchor">URL Shenanigans!</a><br>
+            <a href="#focusAnchor">The One Ring!</a><br>
+            <a href="#trackAnchor">Track Events!</a><br>
+            <a href="#getMetadataAnchor">Get Metadata!</a><br>
         </div>
         <div class="main">
-            <h2>Buttons!</h2>
-            <p>There are three levels of divs here. How will the clicks behave?</p>
-            <div class=layer1>
-                <button onclick="location.href = 'https://www.bungie.com';" id="myButton" class="btn green">External
-                    Link</button>
-                <div class=layer2>
-                    <button onclick="location.href = 'Darkness.html';" id="myButton" class="btn arc">Same
-                        site</button>
-                    <div class=layer3>
-                        <button onclick="location.href = '#pageAnchor';" id="myButton" class="btn void">Page
-                            Anchor</button>
+            <div>
+                <h2 id="buttonAnchor">Clicky clicky!</h2>
+                <p>There are three levels of divs here. How will the clicks behave?</p>
+                <div class=layer1>
+                    <button onclick="location.href = 'https://www.bungie.com';" id="myButton" class="btn green">External
+                        Link</button>
+                    <div class=layer2>
+                        <button onclick="location.href = 'Darkness.html';" id="myButton" class="btn arc">Same
+                            site</button>
+                        <div class=layer3>
+                            <button onclick="location.href = '#pageAnchor';" id="myButton" class="btn void">Page
+                                Anchor</button>
+                        </div>
+                        <img src="hadesCerberus.png" width="50" style="padding-left:20px;">
                     </div>
-                    <img src="hadesCerberus.png" width="50" style="padding-left:20px;">
+                    <br>
+                </div>
+                <div>
+                    <p>Click these to generate click events</p>
+                    <div>
+                        <button onclick="dummyClickArc()" class="btn arc"
+                            id="01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789"
+                            custom="arc button"
+                            style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>Click me for a dummy event!</button>
+                        <button onclick="dummyClickGreen()" class="btn green" id="0123456789" custom="green button"
+                            style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>Click me for a dummy event!</button>
+                        <button onclick="dummyClickSolar()" class="btn solar" id="https://www.alisyn.com?queryparam=123"
+                            custom="solar button"
+                            style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>Click me for a dummy event!</button>
+                        <button onclick="dummyClickRed()" class="btn red"
+                            id="https://www.xxxxxxxx.com/xxxxxxx/xxxxxx/Xxxxx-XXX?utm_source=xxxxxx&amp;utm_medium=xxxxx&amp;utm_campaign=xxxxxxxx_xxxxxxx_xxxxx"
+                            custom="red button"
+                            style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>Click
+                            me
+                            for a dummy event!</button>
+
+                        <script type="text/javascript">
+                            function dummyClickArc() {
+                                console.log("Arc click");
+                            }
+                        </script>
+                        <script type="text/javascript">
+                            function dummyClickGreen() {
+                                console.log("Green click");
+                            }
+                        </script>
+                        <script type="text/javascript">
+                            function dummyClickSolar() {
+                                console.log("Solar click");
+                            }
+                        </script>
+                        <script type="text/javascript">
+                            function dummyClickRed() {
+                                console.log("Red click");
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div>
+                <h2 id="dropdownAnchor">Dropdowns!</h2>
+                <p>How can I capture the value in the dropdown?</p>
+                <div class="box">
+                    <select id="select1">
+                        <option value="start" disabled>Choose your fighter</option>
+                        <option value="warlock">Warlock</option>
+                        <option value="hunter">Hunter</option>
+                        <option value="titan">Titan</option>
+                    </select>
                 </div>
                 <br>
+                <button onclick="getOption()" class="btn void"> Check option </button>
+                <p> The value is:
+                    <span class="output"></span>
+                </p>
+                <script type="text/javascript">
+                    function getOption() {
+                        selectElement = document.querySelector('#select1');
+                        output = selectElement.value;
+                        document.querySelector('.output').textContent = output;
+                    }
+                </script>
             </div>
             <hr>
-            <h2>Dropdowns!</h2>
-            <p>How can I capture the value in the dropdown?</p>
-            <div class="box">
-                <select id="select1">
-                    <option value="start" disabled>Choose your fighter</option>
-                    <option value="warlock">Warlock</option>
-                    <option value="hunter">Hunter</option>
-                    <option value="titan">Titan</option>
-                </select>
-            </div>
-            <br>
-            <button onclick="getOption()" class="btn void"> Check option </button>
-
-            <p> The value is:
-                <span class="output"></span>
-            </p>
-
-            <script type="text/javascript">
-                function getOption() {
-                    selectElement = document.querySelector('#select1');
-                    output = selectElement.value;
-                    document.querySelector('.output').textContent = output;
-                }
-            </script>
-            <hr>
-            <div id="overlay" onclick="off()">
-                <img src="hadesItems.jpeg" style="width:500px; position:absolute; top: 50%; left: 30%;">
-            </div>
-
             <div>
-                <h2>Overlays and Modals!</h2>
-                <button onclick="on()" class="btn arc">Turn on overlay effect</button>
-            </div>
-            <!-- Trigger/Open The Modal -->
-            <button id="myBtn" class="btn void">Open Modal</button>
-
-            <!-- The Modal -->
-            <div id="myModal" class="modal">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <p>This modal is very important</p>
-                    <p>But these badges are ruining everything!</p>
+                <div id="overlay" onclick="off()">
+                    <img src="hadesItems.jpeg" style="width:500px; position:absolute; top: 50%; left: 30%;">
                 </div>
+                <div>
+                    <h2 id="modalsAnchor">Overlays and Modals!</h2>
+                    <button onclick="on()" class="btn arc">Turn on overlay effect</button>
+                </div>
+                <!-- Trigger/Open The Modal -->
+                <button id="myBtn" class="btn void">Open Modal</button>
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>This modal is very important</p>
+                        <p>But these badges are ruining everything!</p>
+                    </div>
+                </div>
+                <script>
+                    // Get the modal
+                    var modal = document.getElementById("myModal");
 
-            </div>
+                    // Get the button that opens the modal
+                    var btnModal = document.getElementById("myBtn");
 
-            <script>
-                // Get the modal
-                var modal = document.getElementById("myModal");
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
 
-                // Get the button that opens the modal
-                var btnModal = document.getElementById("myBtn");
+                    // When the user clicks the button, open the modal 
+                    btnModal.onclick = function () {
+                        modal.style.display = "block";
+                    }
 
-                // Get the <span> element that closes the modal
-                var span = document.getElementsByClassName("close")[0];
-
-                // When the user clicks the button, open the modal 
-                btnModal.onclick = function () {
-                    modal.style.display = "block";
-                }
-
-                // When the user clicks on <span> (x), close the modal
-                span.onclick = function () {
-                    modal.style.display = "none";
-                }
-
-                // When the user clicks anywhere outside of the modal, close it
-                window.onclick = function (event) {
-                    if (event.target == modal) {
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function () {
                         modal.style.display = "none";
                     }
-                }
-            </script>
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function (event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                </script>
+            </div>
             <hr>
             <div>
-                <h2>updateOptions and identify</h2>
-
+                <h2 id="identifyAnchor">updateOptions and identify</h2>
                 Enter a new random value: <input type="text" id="field1" value="oh hai!"
                     style='border:solid 1px black;height: 40px;vertical-align: middle;'>
                 <button onclick="updateRandom()" class="btn arc"
                     style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>update!</button>
                 <button onclick="identifyRandom()" class="btn void"
                     style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>identify!</button>
-
                 <script type="text/javascript">
                     function updateRandom() {
                         var inputVal = document.getElementById("field1").value;
@@ -423,7 +455,6 @@
                         console.log("Visitor-level agent metadata field 'random' changed to " + inputVal + ". try running a validateInstall()");
                     }
                 </script>
-
                 <script type="text/javascript">
                     function identifyRandom() {
                         var inputVal = document.getElementById("field1").value;
@@ -438,7 +469,6 @@
                 <br>
                 Enter a new visitorId: <input type="text" id="visitorField1" value="testVisitor1"
                     style='border:solid 1px black;height: 40px;vertical-align: middle;'>
-
                 <button onclick="identifyNewVisitor()" class="btn void"
                     style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>identify!</button>
                 <script type="text/javascript">
@@ -451,19 +481,15 @@
                         });
                     }
                 </script>
-
             </div>
-
             <hr>
             <br>
             <div>
-                <h2>URL Shenanigans</h2>
-
+                <h2 id="locationAPIAnchor">URL Shenanigans</h2>
                 Enter the name you want this page to be: <input type="text" id="setUrlField" value="boringWebPageName"
                     style='border:solid 1px black;height: 40px;vertical-align: middle;'>
                 <button onclick="updateUrl()" class="btn arc" id="updateUrlButton"
                     style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>update!</button>
-
                 <script type="text/javascript">
                     function updateUrl() {
                         var urlVal = document.getElementById("setUrlField").value;
@@ -475,14 +501,13 @@
             <hr>
             <br>
             <div>
-                <h2>The One Ring of textboxes</h2>
-
+                <h2 id="focusAnchor">The One Ring of textboxes</h2>
                 <input type="text" id="textFocus" value="all eyes on me"
-                    style='border:solid 1px black;height: 40px; width = 400px; vertical-align: middle;'>
-
-                <p>Once you click on this text field, it will hold focus until the page is refreshed or you kill the event listener.</p>
-
-
+                    style='border:solid 1px black;height: 40px; width: 400px; vertical-align: middle;'>
+                <br><br>
+                <p>Once you click on this text field, it will hold focus until the page is refreshed or you kill the
+                    event listener.
+                </p>
                 <script>
                     var x = document.getElementById("textFocus");
                     x.addEventListener("focus", myFocusFunction, true);
@@ -498,17 +523,67 @@
                         document.getElementById("textFocus").style.background = "#eb9a9a";
                     }
                 </script>
-
+            </div>
+            <hr>
+            <br>
+            <div>
+                <h2 id="trackAnchor">Track Event</h2>
+                Enter the value for track event property "property1" <input type="text" id="setProperyValue"
+                    value="enter value here" style='border:solid 1px black;height: 40px;vertical-align: middle;'>
+                <button onclick="sendTrackEvent()" class="btn void" id="sendTrackEventButton"
+                    style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>send!</button>
+                <script type="text/javascript">
+                    function sendTrackEvent() {
+                        var trackEventProperty = document.getElementById("setProperyValue").value;
+                        pendo.track("Client Side Test Event", {
+                            property1: trackEventProperty
+                        });
+                        console.log("Track event sent with property value: " + trackEventProperty);
+                    }
+                </script>
+                <xmp style='font-size: 10px;'>
+                    <script type="text/javascript">
+                        function sendTrackEvent() {
+                            var trackEventProperty = document.getElementById("setProperyValue").value;
+                            pendo.track("Client Side Test Event", {
+                                property1: trackEventProperty
+                            });
+                            console.log("Track event sent with property value: " + trackEventProperty);
+                        }
+                    </script>
+                </xmp>
+            </div>
+            <hr>
+            <br>
+            <div>
+                <h2 id="getMetadataAnchor">Get Metadata</h2>
+                <button onclick="getMetadata()" class="btn void" id="getMetadata"
+                    style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>getMetadata!</button>
+                <p> The value is:
+                    <span class="getMetadataOutput"></span>
+                </p>
+                <script type="text/javascript">
+                    function getMetadata() {
+                        getMetadataOutput = pendo.getSerializedMetadata();
+                        document.querySelector('.getMetadataOutput').textContent = JSON.stringify(getMetadataOutput);
+                    }
+                </script>
+                <xmp style='font-size: 10px;'>
+                    <script type="text/javascript">
+                        function getMetadata() {
+                            getMetadataOutput = pendo.getSerializedMetadata();
+                            document.querySelector('.getMetadataOutput').textContent = getMetadataOutput;
+                        }
+                    </script>
+                </xmp>
             </div>
             <hr>
             <br>
             <div>
                 <h2>Random script testing</h2>
-
                 Click me to run the script below: <button onclick="randoScript()" class="btn arc" id="randoTester"
                     style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>test
                     me!</button>
-
                 <!-- put your script here and in the script tags below so you know what you're actually testing  -->
                 <xmp style='font-size: 10px;'>
                     <script type="text/javascript">
@@ -538,7 +613,6 @@
                         }
                     </script>
                 </xmp>
-
                 <!-- put your script here, and don't forget to paste the code in the xmp tags above, too -->
                 <script type="text/javascript">
                     function randoScript() {
@@ -570,8 +644,6 @@
         </div>
         <p id="pageAnchor" style=font-size:8px;float:right>This is where that page anchor button goes.</p>
     </div>
-
-
     <div class="footer">
         <h2>Helpful Links</h2>
         <a href="https://www.bungie.com">Bungo</a> |
