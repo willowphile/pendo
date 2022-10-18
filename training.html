@@ -34,7 +34,8 @@
                 id: 'Bungie',
                 name: 'Bungo',
                 parentAccountOnly: 'yes'
-            }
+            },
+            excludeAllText: true
         });
     </script>
     <!--    
@@ -361,6 +362,20 @@
                         </script>
                     </div>
                 </div>
+                <div class=layer1 customLayer="customLayer">
+                    <button onclick="location.href = 'https://www.bungie.com';" id="myButton" class="btn green">External
+                        Link</button>
+                    <div class=layer2>
+                        <button onclick="location.href = 'Darkness.html';" id="myButton" class="btn arc">Same
+                            site</button>
+                        <div class=layer3>
+                            <button onclick="location.href = '#pageAnchor';" id="myButton" class="btn void">Page
+                                Anchor</button>
+                        </div>
+                        <img src="hadesCerberus.png" width="50" style="padding-left:20px;">
+                    </div>
+                    <br>
+                </div>
             </div>
             <hr>
             <div>
@@ -528,6 +543,35 @@
             <br>
             <div>
                 <h2 id="trackAnchor">Track Event</h2>
+                Enter the value for track event property "property1" <input type="text" id="setProperyValue"
+                    value="enter value here" style='border:solid 1px black;height: 40px;vertical-align: middle;'>
+                <button onclick="sendTrackEvent()" class="btn void" id="sendTrackEventButton"
+                    style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>send!</button>
+                <script type="text/javascript">
+                    function sendTrackEvent() {
+                        var trackEventProperty = document.getElementById("setProperyValue").value;
+                        pendo.track("Client Side Test Event", {
+                            property1: trackEventProperty
+                        });
+                        console.log("Track event sent with property value: " + trackEventProperty);
+                    }
+                </script>
+                <xmp style='font-size: 10px;'>
+                    <script type="text/javascript">
+                        function sendTrackEvent() {
+                            var trackEventProperty = document.getElementById("setProperyValue").value;
+                            pendo.track("Client Side Test Event", {
+                                property1: trackEventProperty
+                            });
+                            console.log("Track event sent with property value: " + trackEventProperty);
+                        }
+                    </script>
+                </xmp>
+            </div>
+            <hr>
+            <br>
+            <div>
+                <h2 id="trackAnchor">Track Event Property Name Test</h2>
                 Enter the value for track event property "property1" <input type="text" id="setProperyValue"
                     value="enter value here" style='border:solid 1px black;height: 40px;vertical-align: middle;'>
                 <button onclick="sendTrackEvent()" class="btn void" id="sendTrackEventButton"
