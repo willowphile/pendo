@@ -6,8 +6,8 @@ nonceValue = time.time()
 
 payload = {
         "visitor": {
-            "id": "SinglePageVisitor2",
-            "signedVisitorMetadata": "oh heyyyy"
+            "id": "SinglePageVisitorJuan",
+            "signedVisitorMetadata": "oh heyyyy juannn"
         },
 
         "account": {

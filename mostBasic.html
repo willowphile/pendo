@@ -27,7 +27,7 @@
           id: user_account_id // Highly recommended
         },
         location: {
-          setUrl: ('http://app.funco.com/current/page')
+          setUrl: ('http://app.whatever.com/current/page')
         }
       });
     })('a93e68a6-46fd-443a-699f-aa31985c066d');
@@ -78,34 +78,35 @@
 
     </div>
     <div class="main">
-      <h2>Hunters</h2>
-      <button onclick="location.href = 'https://destiny.fandom.com/wiki/Stormcaller';" id="myButton"
-        class="btn arc">Arcstrider</button>
-      <button onclick="location.href = 'https://destiny.fandom.com/wiki/Voidwalker';" id="myButton"
-        class="btn void">Nightstalker</button>
-      <button onclick="location.href = 'https://destiny.fandom.com/wiki/Dawnblade';" id="myButton"
-        class="btn solar">Gunslinger</button>
-      <br>
-      <br>
-      <p>Ogre arcstrider eris witherhoard Ana Bray cabal Whisper of the Worm</p><br>
-      <img src="nightstalker.jpg" width="400"><br><br>
-      <img src="TransparentHunter.png" width="400"><br><br>
-      <img src="8BitHunter.jpg" width="400" id="ScrollTest"><br><br>
+        <div>
+            <div>
+                <button onclick="dummyClickArc()" class="btn arc"
+                    id="ohHai"
+                    custom="arc button"
+                    style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>Click me for a dummy event!</button>
 
-      <!-- Hold onto ths for later
-<button id="myButton" class="float-left submit-button" >Home</button>
-
-<script type="text/javascript">
-    document.getElementById("myButton").onclick = function () {
-        location.href = "www.yoursite.com";
-    };
-</script>
--->
-      <button onclick="location.href = 'https://www.bungie.com';" id="myButton" class="btn red">Bungo</button>
-      <button onclick="location.href = 'https://www.d2checklist.com';" id="myButton"
-        class="btn green">D2Checklist</button>
-      <button onclick="location.href = 'https://www.destinyitemmanager.com';" id="myButton"
-        class="btn default">DIM</button>
+                <script type="text/javascript">
+                    function dummyClickArc() {
+                        console.log("Arc click");
+                    }
+                </script>
+                <script type="text/javascript">
+                    function dummyClickGreen() {
+                        console.log("Green click");
+                    }
+                </script>
+                <script type="text/javascript">
+                    function dummyClickSolar() {
+                        console.log("Solar click");
+                    }
+                </script>
+                <script type="text/javascript">
+                    function dummyClickRed() {
+                        console.log("Red click");
+                    }
+                </script>
+            </div>
+        </div>
     </div>
   </div>
   <div class="footer">
