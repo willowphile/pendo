@@ -32,7 +32,7 @@
         z = e.getElementsByTagName(n)[0];
         z.parentNode.insertBefore(y, z);
       })(window, document, 'script', 'pendo');
-
+ 
       // Call this whenever information about your visitors becomes available
       // Please use Strings, Numbers, or Bools for value types.
       pendo.initialize({
@@ -70,7 +70,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
-
   <link rel="shortcut icon" type="image/jpg" href="engram.ico" />
 </head>
 
@@ -82,7 +81,7 @@
   </div>
 
   <div class="navbar">
-    <a href="index.html"">Home</a>
+    <a href="index.html" class="active">Home</a>
     <a href="warlock.html">Warlock</a>
     <a href="hunter.html">Hunter</a>
     <a href="titan.html">Crayon-eater</a>
@@ -91,7 +90,10 @@
       <div class="dropdown-content">
         <a href="segment.html">Segment</a>
         <a href="gtm.html">GTM</a>
-      </div>
+        <a href="GTMwVars.html">GTM with Variables</a>
+        <a href="anonymous.html">Anonymous</a>
+        <a href="customInitializes.html">Custom Initializes</a>
+    </div>
     </div>
     <a href="cats.html" class="right">Cats</a>
     <a href="Darkness.html" class="right">Dark</a>
@@ -101,9 +103,9 @@
   <div class="row">
     <div class="side">
       <h2>Stuff</h2>
-      <img src="rainbowEmblem.png" width="300"><br>
-      <img src="catEmblem.png" width="300"><br>
-      <img src="heartEmblem.png" width="300"><br>
+      <img src="img/rainbowEmblem.png" width="300"><br>
+      <img src="img/catEmblem.png" width="300"><br>
+      <img src="img/heartEmblem.png" width="300"><br>
       <br>
       <SCRIPT LANGUAGE="JAVASCRIPT">
 
@@ -128,7 +130,8 @@
       <br>
       <br>
 
-      <iframe src="https://www.google.com" height="700" width="100%" title="Cats"></iframe>
+      <iframe src="cats.html" height="800" width="75%" title="Cats" style="border:1px solid black;"></iframe>
+      <iframe src="iframe.html" height="800" width="75%" title="iframe" style="border:1px solid black;"></iframe>
     </div>
   </div>
 
