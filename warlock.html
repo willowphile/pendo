@@ -14,33 +14,20 @@
         z = e.getElementsByTagName(n)[0]; z.parentNode.insertBefore(y, z);
       })(window, document, 'script', 'pendo');
 
-      // Call this whenever information about your visitors becomes available
-      // Please use Strings, Numbers, or Bools for value types.
       pendo.initialize({
         //excludeAllText: true,
         visitor: {
-          id: user_id,   // Required if user is logged in
-          email: user_email, // Recommended if using Pendo Feedback, or NPS Email
-          full_name: user_full_name,// Recommended if using Pendo Feedback
+          id: user_id, 
+          email: user_email,
+          full_name: user_full_name,
           language: user_language,
           random: user_random_data,
           boolean: user_boolean
-
-          // You can add any additional visitor level key-values here,
-          // as long as it's not one of the above reserved names.
         },
 
         account: {
-          id: user_account_id // Highly recommended
-          // name:         // Optional
-          // is_paying:    'true' // Recommended if using Pendo Feedback
-          // monthly_value: '2.49' // Recommended if using Pendo Feedback
-          // planLevel:    // Optional
-          // planPrice:    // Optional
-          // creationDate: // Optional
-
-          // You can add any additional account level key-values here,
-          // as long as it's not one of the above reserved names.
+          id: user_account_id, 
+          type: user_account_type
         }
       });
     })('a93e68a6-46fd-443a-699f-aa31985c066d');

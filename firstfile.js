@@ -6,6 +6,7 @@ var user_account_id = 'Hive';
 var user_language = 'en_GB';
 var user_random_data = 'Subjugant to None';
 var user_boolean = true;
+var user_account_type = 'Darkness'
 
 /*
 var user_id = 'IkoraRey';

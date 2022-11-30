@@ -3,6 +3,47 @@
 
 <head>
     <script src="firstfile.js"></script>
+    <!--     <script>
+        (function (apiKey) {
+            (function (p, e, n, d, o) {
+                var v, w, x, y, z;
+                o = p[d] = p[d] || {};
+                o._q = [];
+                v = ['initialize', 'identify', 'updateOptions', 'pageLoad', 'track', 'clearSession'];
+                for (w = 0, x = v.length; w < x; ++w)
+                    (function (m) {
+                        o[m] = o[m] || function () {
+                            o._q[m === v[0] ? 'unshift' : 'push']([m].concat([].slice.call(arguments, 0)));
+                        };
+                    })(v[w]);
+                y = e.createElement(n);
+                y.async = !0;
+
+                y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
+                z = e.getElementsByTagName(n)[0];
+                z.parentNode.insertBefore(y, z);
+            })(window, document, 'script', 'pendo');
+            pendo.initialize({
+                //by adding the events section below, it clears any exisitng visitorId
+                //that the agent may be holding onto from a previous page
+                events: {
+                    ready: function () {
+                        console.log('calling clearSession');
+                        pendo.clearSession();
+                    }
+                }
+            });
+            pendo.identify({
+                visitor: {
+                    id:"newSessionVisitor"
+                },
+                account: {
+                    id: "newSessionAccount"
+                }
+            });
+        })('a93e68a6-46fd-443a-699f-aa31985c066d');
+    </script> -->
+
     <script>
         (function (apiKey) {
             (function (p, e, n, d, o) {
@@ -31,13 +72,26 @@
                         console.log('calling clearSession');
                         pendo.clearSession();
                     }
-                },
+                }
+            });
+            pendo.identify({
                 visitor: {
+                    id: "newSessionVisitor"
+                },
+                account: {
+                    id: "newSessionAccount"
                 }
             });
         })('a93e68a6-46fd-443a-699f-aa31985c066d');
     </script>
 
+    <script>
+        setTimeout(function () {
+            pendo.loadGuides();
+            console.log("did this even fire?");
+            alert("Loading guides after 5 seconds!");
+        }, 5000);
+    </script>
     <title>Alisyn's Training Site</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,7 +101,6 @@
 </head>
 
 <body>
-
     <div class="header">
         <h1>Oh hai</h1>
         <p>I am a website</p>
@@ -59,22 +112,22 @@
         <a href="hunter.html">Hunter</a>
         <a href="titan.html">Crayon-eater</a>
         <div class="dropdown">
-          <button class="dropbtn">Special Installs</button>
-          <div class="dropdown-content">
-            <a href="anonymous.html">Anonymous</a>
-            <a href="customInitializes.html">Custom Initializes</a>
-            <a href="gtm.html">GTM</a>
-            <a href="GTMwVars.html">GTM with Variables</a>
-            <a href="locationApi.html">Location API</a>
-            <a href="segment.html">Segment</a>
-        </div>
+            <button class="dropbtn">Special Installs</button>
+            <div class="dropdown-content">
+                <a href="anonymous.html">Anonymous</a>
+                <a href="customInitializes.html">Custom Initializes</a>
+                <a href="gtm.html">GTM</a>
+                <a href="GTMwVars.html">GTM with Variables</a>
+                <a href="locationApi.html">Location API</a>
+                <a href="segment.html">Segment</a>
+            </div>
         </div>
         <a href="SinglePageSite/index.html" class="right">SinglePage</a>
         <a href="cats.html" class="right">Cats</a>
         <a href="Darkness.html" class="right">Dark</a>
         <a href="training-eu.html" class="right">EU</a>
         <a href="training.html" class="right">Training</a>
-      </div>
+    </div>
 
     <div class="row">
         <div class="side">

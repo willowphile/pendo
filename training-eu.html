@@ -30,16 +30,10 @@
             account: {
                 id: user_account_id, // Highly recommended
                 type: "AccountType"// Optional
-            },
-
-            parentAccount: {
-                id: 'Bungie',
-                name: 'Bungo',
-                parentAccountOnly: 'yes'
             }
         });
     </script>
-    
+
     <script>
         function on() {
             document.getElementById("overlay").style.display = "block";
@@ -176,6 +170,19 @@
             display: block;
             width: 400px;
         }
+
+        .header {
+            padding: 20px;
+            text-align: center;
+            background: #41007e;
+            color: white;
+        }
+
+        .headerImages {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
     <link rel="shortcut icon" type="image/jpg" href="engram.ico" />
 </head>
@@ -183,8 +190,13 @@
 <body>
 
     <div class="header">
-        <h1>Oh hai</h1>
-        <p>I am a website</p>
+        <h1>Oh blimey</h1>
+        <p>It's a website innit</p><br>
+        <div class="headerImages">
+            <img src="img/fullEnglish.jpeg" width="300">
+            <img src="img/unionJack.png" width="600">
+            <img src="img/teaService.jpeg" width="300">
+        </div>
     </div>
 
     <div class="navbar">
@@ -193,29 +205,27 @@
         <a href="hunter.html">Hunter</a>
         <a href="titan.html">Crayon-eater</a>
         <div class="dropdown">
-          <button class="dropbtn">Special Installs</button>
-          <div class="dropdown-content">
-            <a href="anonymous.html">Anonymous</a>
-            <a href="customInitializes.html">Custom Initializes</a>
-            <a href="gtm.html">GTM</a>
-            <a href="GTMwVars.html">GTM with Variables</a>
-            <a href="locationApi.html">Location API</a>
-            <a href="segment.html">Segment</a>
-        </div>
+            <button class="dropbtn">Special Installs</button>
+            <div class="dropdown-content">
+                <a href="anonymous.html">Anonymous</a>
+                <a href="customInitializes.html">Custom Initializes</a>
+                <a href="gtm.html">GTM</a>
+                <a href="GTMwVars.html">GTM with Variables</a>
+                <a href="locationApi.html">Location API</a>
+                <a href="segment.html">Segment</a>
+            </div>
         </div>
         <a href="SinglePageSite/index.html" class="right">SinglePage</a>
         <a href="cats.html" class="right">Cats</a>
         <a href="Darkness.html" class="right">Dark</a>
         <a href="training-eu.html" class="right">EU</a>
         <a href="training.html" class="right">Training</a>
-      </div>
+    </div>
 
     <div class="row">
         <div class="side">
-            <h2>Stuff</h2>
-            <img src="img/rainbowEmblem.png" width="300"><br>
-            <img src="img/catEmblem.png" width="300"><br>
-            <img src="img/heartEmblem.png" width="300"><br>
+            <h2>Tooltips</h2>
+            <img src="img/doctorWho.gif" width="500"><br>
             <br>
             <SCRIPT LANGUAGE="JAVASCRIPT">
 
