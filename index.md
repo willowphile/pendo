@@ -50,7 +50,7 @@
         },
 
         account: {
-          id: "user_account_id", // Highly recommended
+          id: user_account_id, // Highly recommended
           type: "AccountType"// Optional
         },
 
@@ -88,15 +88,18 @@
     <div class="dropdown">
       <button class="dropbtn">Special Installs</button>
       <div class="dropdown-content">
-        <a href="segment.html">Segment</a>
-        <a href="gtm.html">GTM</a>
-        <a href="GTMwVars.html">GTM with Variables</a>
         <a href="anonymous.html">Anonymous</a>
         <a href="customInitializes.html">Custom Initializes</a>
+        <a href="gtm.html">GTM</a>
+        <a href="GTMwVars.html">GTM with Variables</a>
+        <a href="locationApi.html">Location API</a>
+        <a href="segment.html">Segment</a>
     </div>
     </div>
+    <a href="SinglePageSite/index.html" class="right">SinglePage</a>
     <a href="cats.html" class="right">Cats</a>
     <a href="Darkness.html" class="right">Dark</a>
+    <a href="training-eu.html" class="right">EU</a>
     <a href="training.html" class="right">Training</a>
   </div>
 
