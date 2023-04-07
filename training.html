@@ -116,6 +116,9 @@
     <title>Alisyn's Training Site</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" 
+        content="script-src 'self' 'unsafe-inline' 'unsafe-eval' app.pendo.io cdn.pendo.io data.pendo.io https://pendo-io-static.storage.googleapis.com https://pendo-static-5745181794369536.storage.googleapis.com;
+        style-src 'self' 'unsafe-inline' 'unsafe-eval' 'self' cdn.pendo.io https://pendo-static-5745181794369536.storage.googleapis.com;">
     <link rel="stylesheet" href="styles.css">
     <style>
         .hide {
@@ -255,23 +258,23 @@
         <a href="hunter.html">Hunter</a>
         <a href="titan.html">Crayon-eater</a>
         <div class="dropdown">
-          <button class="dropbtn">Special Installs</button>
-          <div class="dropdown-content">
-            <a href="anonymous.html">Anonymous</a>
-            <a href="customInitializes.html">Custom Initializes</a>
-            <a href="gtm.html">GTM</a>
-            <a href="GTMwVars.html">GTM with Variables</a>
-            <a href="locationApi.html">Location API</a>
-            <a href="segment.html">Segment</a>
-        </div>
+            <button class="dropbtn">Special Installs</button>
+            <div class="dropdown-content">
+                <a href="anonymous.html">Anonymous</a>
+                <a href="customInitializes.html">Custom Initializes</a>
+                <a href="gtm.html">GTM</a>
+                <a href="GTMwVars.html">GTM with Variables</a>
+                <a href="locationApi.html">Location API</a>
+                <a href="segment.html">Segment</a>
+            </div>
         </div>
         <a href="SinglePageSite/index.html" class="right">SinglePage</a>
         <a href="cats.html" class="right">Cats</a>
         <a href="Darkness.html" class="right">Dark</a>
         <a href="training-eu.html" class="right">EU</a>
         <a href="training.html" class="right">Training</a>
-      </div>
-      
+    </div>
+
     <div class="row">
         <div class="side">
             <h2>Stuff</h2>
@@ -335,12 +338,15 @@
                         <button onclick="dummyClickArc()" class="btn arc"
                             id="01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789"
                             custom="arc button"
-                            style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>Click me for a dummy event!</button>
+                            style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>Click
+                            me for a dummy event!</button>
                         <button onclick="dummyClickGreen()" class="btn green" id="0123456789" custom="green button"
-                            style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>Click me for a dummy event!</button>
+                            style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>Click
+                            me for a dummy event!</button>
                         <button onclick="dummyClickSolar()" class="btn solar" id="https://www.alisyn.com?queryparam=123"
                             custom="solar button"
-                            style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>Click me for a dummy event!</button>
+                            style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>Click
+                            me for a dummy event!</button>
                         <button onclick="dummyClickRed()" class="btn red"
                             id="https://www.xxxxxxxx.com/xxxxxxx/xxxxxx/Xxxxx-XXX?utm_source=xxxxxx&amp;utm_medium=xxxxx&amp;utm_campaign=xxxxxxxx_xxxxxxx_xxxxx"
                             custom="red button"
