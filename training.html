@@ -3,6 +3,7 @@
 
 <head>
     <script src="firstfile.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script>
         (function (apiKey) {
             (function (p, e, n, d, o) {
@@ -35,7 +36,7 @@
                 name: 'Bungo',
                 parentAccountOnly: 'yes'
             },
-            excludeAllText: true
+            excludeAllText: false
         });
     </script>
     <!--    
@@ -115,8 +116,10 @@
 
     <title>Alisyn's Training Site</title>
     <meta charset="UTF-8">
+    <!-- uncomment to automatically refresh page every x seconds -->
+    <!-- <meta http-equiv="refresh" content="10"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Security-Policy" 
+    <meta http-equiv="Content-Security-Policy"
         content="script-src 'self' 'unsafe-inline' 'unsafe-eval' app.pendo.io cdn.pendo.io data.pendo.io https://pendo-io-static.storage.googleapis.com https://pendo-static-5745181794369536.storage.googleapis.com;
         style-src 'self' 'unsafe-inline' 'unsafe-eval' 'self' cdn.pendo.io https://pendo-static-5745181794369536.storage.googleapis.com;">
     <link rel="stylesheet" href="styles.css">
@@ -135,12 +138,12 @@
         }
 
         .box select {
-            background-color: #0563af;
+            background-color: purple;
             color: white;
-            padding: 12px;
+            padding: 8px;
             width: 250px;
             border: none;
-            font-size: 20px;
+            font-size: 16px;
             box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
             -webkit-appearance: button;
             appearance: button;
@@ -252,28 +255,17 @@
         <p>I am a website</p>
     </div>
 
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="warlock.html">Warlock</a>
-        <a href="hunter.html">Hunter</a>
-        <a href="titan.html">Crayon-eater</a>
-        <div class="dropdown">
-            <button class="dropbtn">Special Installs</button>
-            <div class="dropdown-content">
-                <a href="anonymous.html">Anonymous</a>
-                <a href="customInitializes.html">Custom Initializes</a>
-                <a href="gtm.html">GTM</a>
-                <a href="GTMwVars.html">GTM with Variables</a>
-                <a href="locationApi.html">Location API</a>
-                <a href="segment.html">Segment</a>
-            </div>
-        </div>
-        <a href="SinglePageSite/index.html" class="right">SinglePage</a>
-        <a href="cats.html" class="right">Cats</a>
-        <a href="Darkness.html" class="right">Dark</a>
-        <a href="training-eu.html" class="right">EU</a>
-        <a href="training.html" class="right">Training</a>
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+
     </div>
+
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("navbar.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
 
     <div class="row">
         <div class="side">
@@ -393,18 +385,17 @@
             </div>
             <hr>
             <div>
-                <h2 id="dropdownAnchor">Dropdowns!</h2>
-                <p>How can I capture the value in the dropdown?</p>
-                <div class="box">
+                <h2 id="dropdownAnchor">Click Event Properties</h2>
+                <p class="big">Capture the value in the dropdown</p>
+                <div class="box" style="display: inline-block;">
                     <select id="select1">
-                        <option value="start" disabled>Choose your fighter</option>
+                        <option selected="true" disabled="disabled">Choose your fighter</option>
                         <option value="warlock">Warlock</option>
                         <option value="hunter">Hunter</option>
                         <option value="titan">Titan</option>
                     </select>
                 </div>
-                <br>
-                <button onclick="getOption()" class="btn void"> Check option </button>
+                <button onclick="getOption()" class="btn void" style="display: inline-block; padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;"> Check option </button>
                 <p> The value is:
                     <span class="output"></span>
                 </p>
@@ -413,6 +404,22 @@
                         selectElement = document.querySelector('#select1');
                         output = selectElement.value;
                         document.querySelector('.output').textContent = output;
+                    }
+                </script>
+                <br>
+                <p class="big">Capture the value in the text box</p>
+                <div class="box" style="display: inline-block;">
+                    <input type="text" class="textbox" id="cep1" value="oh hai!" style="display: inline-block;">
+                </div>
+                <button onclick="getText()" class="btn arc" style="display: inline-block; padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;"> Check text </button>
+                <p> The value is:
+                    <span id="output1"></span>
+                </p>
+                <script type="text/javascript">
+                    function getText() {
+                        selectElement = document.querySelector('#cep1');
+                        output = selectElement.value;
+                        document.querySelector('#output1').textContent = output;
                     }
                 </script>
             </div>
@@ -467,8 +474,7 @@
             <hr>
             <div>
                 <h2 id="identifyAnchor">updateOptions and identify</h2>
-                Enter a new random value: <input type="text" id="field1" value="oh hai!"
-                    style='border:solid 1px black;height: 40px;vertical-align: middle;'>
+                Enter a new random value: <input type="text" class="textbox" id="field1" value="oh hai!">
                 <button onclick="updateRandom()" class="btn arc"
                     style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>update!</button>
                 <button onclick="identifyRandom()" class="btn void"
@@ -496,8 +502,7 @@
                     }
                 </script>
                 <br>
-                Enter a new visitorId: <input type="text" id="visitorField1" value="testVisitor1"
-                    style='border:solid 1px black;height: 40px;vertical-align: middle;'>
+                Enter a new visitorId: <input type="text" class="textbox" id="visitorField1" value="testVisitor1">
                 <button onclick="identifyNewVisitor()" class="btn void"
                     style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>identify!</button>
                 <script type="text/javascript">
@@ -515,8 +520,8 @@
             <br>
             <div>
                 <h2 id="locationAPIAnchor">URL Shenanigans</h2>
-                Enter the name you want this page to be: <input type="text" id="setUrlField" value="boringWebPageName"
-                    style='border:solid 1px black;height: 40px;vertical-align: middle;'>
+                Enter the name you want this page to be: <input type="text" class="textbox" id="setUrlField"
+                    value="boringWebPageName">
                 <button onclick="updateUrl()" class="btn arc" id="updateUrlButton"
                     style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>update!</button>
                 <script type="text/javascript">
@@ -531,7 +536,7 @@
             <br>
             <div>
                 <h2 id="focusAnchor">The One Ring of textboxes</h2>
-                <input type="text" id="textFocus" value="all eyes on me"
+                <input type="text" class="textbox" id="textFocus" value="all eyes on me"
                     style='border:solid 1px black;height: 40px; width: 400px; vertical-align: middle;'>
                 <br><br>
                 <p>Once you click on this text field, it will hold focus until the page is refreshed or you kill the
@@ -558,7 +563,7 @@
             <div>
                 <h2 id="trackAnchor">Track Event</h2>
                 Enter the value for track event property "property1" <input type="text" id="setProperyValue"
-                    value="enter value here" style='border:solid 1px black;height: 40px;vertical-align: middle;'>
+                    value="enter value here" class="textbox">
                 <button onclick="sendTrackEvent()" class="btn void" id="sendTrackEventButton"
                     style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>send!</button>
                 <script type="text/javascript">
@@ -567,6 +572,7 @@
                         pendo.track("Client Side Test Event", {
                             property1: trackEventProperty
                         });
+                        alert("Track event sent with property value: " + trackEventProperty);
                         console.log("Track event sent with property value: " + trackEventProperty);
                     }
                 </script>
@@ -581,35 +587,8 @@
                         }
                     </script>
                 </xmp>
-            </div>
-            <hr>
-            <br>
-            <div>
-                <h2 id="trackAnchor">Track Event Property Name Test</h2>
-                Enter the value for track event property "property1" <input type="text" id="setProperyValue"
-                    value="enter value here" style='border:solid 1px black;height: 40px;vertical-align: middle;'>
-                <button onclick="sendTrackEvent()" class="btn void" id="sendTrackEventButton"
-                    style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>send!</button>
-                <script type="text/javascript">
-                    function sendTrackEvent() {
-                        var trackEventProperty = document.getElementById("setProperyValue").value;
-                        pendo.track("Client Side Test Event", {
-                            property1: trackEventProperty
-                        });
-                        console.log("Track event sent with property value: " + trackEventProperty);
-                    }
-                </script>
-                <xmp style='font-size: 10px;'>
-                    <script type="text/javascript">
-                        function sendTrackEvent() {
-                            var trackEventProperty = document.getElementById("setProperyValue").value;
-                            pendo.track("Client Side Test Event", {
-                                property1: trackEventProperty
-                            });
-                            console.log("Track event sent with property value: " + trackEventProperty);
-                        }
-                    </script>
-                </xmp>
+
+
             </div>
             <hr>
             <br>

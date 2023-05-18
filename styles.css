@@ -20,6 +20,12 @@ p {
   margin: 0;
 }
 
+.big {
+  font-family: myCustomFont;
+  font-size: 18px;
+  margin: 0px;
+}
+
 /* Test for offset labels
   label::before {
     content: "LABEL";
@@ -94,6 +100,16 @@ p {
   padding: 20px;
 }
 
+.textbox {
+  font-size: 16px;
+  font-family: myCustomFont;
+  padding: 0.25em 0.5em;
+  background-color: #fff;
+  border: 2px solid;
+  border-radius: 4px;
+  width: 300px;
+}
+
 /*buttons */
 .btn {
   border: none;
@@ -103,6 +119,7 @@ p {
   font-size: 16px;
   cursor: pointer;
   display: inline-block;
+  border-radius: 4px;
 }
 
 
@@ -207,6 +224,7 @@ p {
 .dropdown {
   float: left;
   overflow: hidden;
+  border-radius: 4px;
 }
 
 .dropdown .dropbtn {
@@ -218,10 +236,12 @@ p {
   background-color: inherit;
   font-family: inherit;
   margin: 0;
+  border-radius: 4px;
 }
 
 .dropdown:hover .dropbtn {
   background-color: ddd;
+  border-radius: 4px;
 }
 
 .dropdown-content {
@@ -231,6 +251,7 @@ p {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  border-radius: 4px;
 }
 
 .dropdown-content a {
@@ -240,14 +261,17 @@ p {
   text-decoration: none;
   display: block;
   text-align: left;
+  border-radius: 4px;
 }
 
 .dropdown-content a:hover {
   background-color: #ddd;
+  border-radius: 4px;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
+  border-radius: 4px;
 }
 
 .buttonRainbow {
@@ -318,3 +342,4 @@ p {
   top: 0;
   border-radius: 10px;
 }
+

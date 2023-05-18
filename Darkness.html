@@ -3,6 +3,7 @@
 
 <head>
   <script src="firstfile.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <script>
     (function (apiKey) {
       (function (p, e, n, d, o) {
@@ -83,23 +84,17 @@
     <p>I am obviously a completely different website</p>
   </div>
 
-  <div class="navbar">
-    <a href="index.html">Home</a>
-    <div class="dropdown">
-      <button class="dropbtn">Special Installs</button>
-      <div class="dropdown-content">
-        <a href="anonymous.html">Anonymous</a>
-        <a href="customInitializes.html">Custom Initializes</a>
-        <a href="gtm.html">GTM</a>
-        <a href="GTMwVars.html">GTM with Variables</a>
-        <a href="locationApi.html">Location API</a>
-        <a href="segment.html">Segment</a>
-      </div>
-    </div>
-    <a href="SinglePageSite/index.html" class="right">SinglePage</a>
-    <a href="Darkness.html" class="right">Dark1</a>
-    <a href="dark2.html" class="right">Dark2</a>
+  <!--Navigation bar-->
+  <div id="nav-placeholder">
+
   </div>
+
+  <script>
+    $(function () {
+      $("#nav-placeholder").load("navbar.html");
+    });
+  </script>
+  <!--end of Navigation bar-->
 
   <div class="row">
     <div class="side">

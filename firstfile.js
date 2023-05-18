@@ -90,3 +90,12 @@ var user_full_name = 'The Drifter';
 var user_language = 'en_GB';
 var user_random_data = 'Gambito'
 */
+
+/*
+var user_id = 'exampleVisitor';
+var user_account_id = 'exampleAccount';
+var user_language = 'en_US';
+var user_email = null;
+var user_full_name = null;
+var user_random_data = null;
+*/
