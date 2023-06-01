@@ -105,21 +105,6 @@
                     }
                 </script>
             </div>
-            <br>
-            <div>
-                <p>
-                    The current time is:
-                    <span id="datetime" custom="isJames"></span>
-                </p>
-                <script>
-                    function james() {window.setInterval(function setDate() {
-                        var dt = new Date();
-                        document.getElementById("datetime").innerHTML = dt.toLocaleString();
-                        document.getElementById('datetime').setAttribute('custom', 'notJames');
-                    }, 1000);}
-                    setTimeout(james, 5000);
-                </script>
-            </div>
         </div>
     </div>
     <div class="footer">

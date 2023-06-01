@@ -104,27 +104,56 @@
         </div>
     </div>
 
-  <!--Navigation bar-->
-  <div id="nav-placeholder">
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
 
-  </div>
+    </div>
 
-  <script>
-    $(function () {
-      $("#nav-placeholder").load("navbar.html");
-    });
-  </script>
-  <!--end of Navigation bar-->
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("navbar.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
 
     <div class="row">
         <div class="side">
-            <iframe src="iframeSide.html" height="100%" width="100%" title="iframe3" style="border:1px solid black;"></iframe>
-        </div>
-        <div class="main">
-            <iframe src="iframe.html" height="400" width="100%" title="iframe1" style="border:1px solid black;"></iframe>
-            <iframe src="iframe2.html" height="400" width="100%" title="iframe2"
+            <iframe src="iframeSide.html" height="100%" width="100%" title="iframe3"
                 style="border:1px solid black;"></iframe>
-            <iframe src="cats.html" height="400" width="100%" title="Cats" style="border:1px solid black;"></iframe>
+        </div>
+        <div class="main" id="main">
+            <iframe src="iframe.html" height="400" width="100%" title="iframe1"
+                style="border:1px solid black;"></iframe>
+            <!--             
+            <iframe src="iframe2.html" height="400" width="100%" title="iframe2"
+                style="border:1px solid black;"></iframe> 
+            -->
+            <script>
+                window.addEventListener("DOMContentLoaded", function () {
+                    window.setTimeout(function () {
+                        var iframe = document.createElement("iframe")
+                        iframe.src = "iframe2.html"
+                        iframe.scrolling = true
+                        iframe.name = iframe.id = "delayedSameAPIKey"
+                        iframe.height = 400
+                        iframe.width = "100%"
+                        document.getElementById("main").appendChild(iframe)
+                    }, 5000) // wait 2 seconds after loading
+                })
+            </script>
+            <script>
+                window.addEventListener("DOMContentLoaded", function () {
+                    window.setTimeout(function () {
+                        var iframe = document.createElement("iframe")
+                        iframe.src = "cats.html"
+                        iframe.scrolling = true
+                        iframe.name = iframe.id = "delayedCats"
+                        iframe.height = 400
+                        iframe.width = "100%"
+                        document.getElementById("main").appendChild(iframe)
+                    }, 5000) // wait 2 seconds after loading
+                })
+            </script>
         </div>
     </div>
 
