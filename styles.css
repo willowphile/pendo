@@ -293,18 +293,16 @@ p {
 
 .buttonRainbow:before {
   content: "";
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
+  background: linear-gradient(45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000);
   position: absolute;
   top: -2px;
   left: -2px;
@@ -323,9 +321,11 @@ p {
   0% {
     background-position: 0 0;
   }
+
   50% {
     background-position: 400% 0;
   }
+
   100% {
     background-position: 0 0;
   }
@@ -343,3 +343,15 @@ p {
   border-radius: 10px;
 }
 
+#pendo-g-MsJ5dCUaAV1g_WbejhUHJkPqxe4 .pendo-tooltip-caret {
+  border-left: 15px solid blue!important;
+  border-top: 15px solid rgb(225, 72, 16)!important;
+  border-right: 15px solid purple !important;
+}
+
+
+.pendo-tooltip-caret-border {
+  border-left: 15px solid green!important;
+  border-top: 15px solid yellow!important;
+  border-right: 15px solid orange !important;
+}

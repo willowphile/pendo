@@ -36,7 +36,19 @@
                 name: 'Bungo',
                 parentAccountOnly: 'yes'
             },
-            excludeAllText: false
+            events: {
+                onClickCaptured: function (pendoEvent) {
+                    pendoEvent.addEventProperty('customProperty', {
+                        stuff: 'that', we: 'want to save'
+                    });
+
+                    // to see properties on the current event
+                    var getProperties = pendoEvent.getEventProperties();
+                    console.log(getProperties)
+                }
+            },
+            excludeAllText: false,
+            disableGuides: true
         });
     </script>
     <!--    
@@ -363,20 +375,20 @@
                             id="01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789"
                             custom="arc button"
                             style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>Click
-                            me for a dummy event!</button>
+                            me for a blue event!</button>
                         <button onclick="dummyClickGreen()" class="btn green" id="0123456789" custom="green button"
                             style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>Click
-                            me for a dummy event!</button>
+                            me for a green event!</button>
                         <button onclick="dummyClickSolar()" class="btn solar" id="https://www.alisyn.com?queryparam=123"
                             custom="solar button"
                             style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>Click
-                            me for a dummy event!</button>
+                            me for a yellow event!</button>
                         <button onclick="dummyClickRed()" class="btn red"
-                            id="https://www.xxxxxxxx.com/xxxxxxx/xxxxxx/Xxxxx-XXX?utm_source=xxxxxx&amp;utm_medium=xxxxx&amp;utm_campaign=xxxxxxxx_xxxxxxx_xxxxx"
+                            
                             custom="red button"
                             style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>Click
                             me
-                            for a dummy event!</button>
+                            for a red event!</button>
 
                         <script type="text/javascript">
                             function dummyClickArc() {
@@ -492,6 +504,29 @@
                         document.querySelector('#output2').textContent = output;
                     }
                 </script>
+            </div>
+            <hr>
+            <div>
+                <h2 id="dropdownAnchor">CUSTOM Click Event Properties</h2>
+                <p class="big">Capture the value in the text box</p>
+                <div class="box" style="display: inline-block;">
+                    <input type="text" class="textbox" id="customcep" value="i'm special!"
+                        style="display: inline-block;">
+                </div>
+                <button onclick="customCep()" class="btn arc" id="customCepButton"
+                    style="display: inline-block; padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;">
+                    Check text </button>
+                <p> The value is:
+                    <span id="outputCustomCep"></span>
+                </p>
+                <script type="text/javascript">
+                    function customCep() {
+                        selectElement = document.querySelector('#customcep');
+                        output = selectElement.value;
+                        document.querySelector('#outputCustomCep').textContent = output;
+                    }
+                </script>
+                <br>
             </div>
             <hr>
             <div>
@@ -666,6 +701,34 @@
                             document.querySelector('.getMetadataOutput').textContent = getMetadataOutput;
                         }
                     </script>
+                </xmp>
+            </div>
+            <hr>
+            <br>
+            <div>
+                <h2 id="sendApiCallAnchor">Send an API Call to turn off guides</h2>
+                <button onclick="thing()" class="btn void" id="sendApiCallButton"
+                    style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>thing!</button>
+                <p>This doesn't really work :( </p>
+                <script type="text/javascript">
+                    function thing() {
+                        var xhttp = new XMLHttpRequest();
+                        var visitor = pendo.getVisitorId();
+                        var url = "https://app.pendo.io/api/v1/metadata/visitor/pendo/value/" + visitor + "/blacklistguides"
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                alert(this.responseText);
+                            }
+                        };
+                        xhttp.open("POST", decodeURI(url), true);
+                        xhttp.setRequestHeader("x-pendo-integration-key", "9adbc5a6-d34e-4a09-60aa-3f91e2c09b3a.us");
+                        xhttp.send("true");
+                        console.log(xhttp);
+                        console.log(url);
+                    }
+                </script>
+                <xmp style='font-size: 10px;'>
+
                 </xmp>
             </div>
             <hr>

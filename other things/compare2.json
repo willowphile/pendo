@@ -1,10 +1,133 @@
 {
-    "type": "track",
-    "event": "OhHai",
-    "visitorId": "AnaBray",
-    "accountId": "Clovis_Bray_Corporation",
-    "timestamp": 1683640628317,
-    "properties": {
-        "faction": "Dead Orbit"
-    }
-}
+    "response": {
+        "location": "request",
+        "mimeType": "application/json"
+    },
+    "requests": [
+        {
+            "name": "GuideElementClicks",
+            "pipeline": [
+                {
+                    "source": {
+                        "guideEvents": {
+                            "guideId": "wZqkE9P92nMvErPFZesZsqA4tSk",
+                            "blacklist": "apply"
+                        },
+                        "timeSeries": {
+                            "period": "dayRange",
+                            "first": 1683518400000,
+                            "count": 30
+                        }
+                    }
+                },
+                {
+                    "filter": "eventSubType(type) == \"guideActivity\""
+                },
+                {
+                    "filter": "uiElementType != \"\""
+                },
+                {
+                    "filter": "uiElementId == \"pendo-button-faf0d608\""
+                },
+                {
+                    "identified": "visitorId"
+                },
+                {
+                    "fork": [
+                        [
+                            {
+                                "group": {
+                                    "group": [
+                                        "visitorId"
+                                    ],
+                                    "fields": [
+                                        {
+                                            "numClicks": {
+                                                "count": null
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "sort": [
+                                    "-numClicks",
+                                    "visitorId"
+                                ]
+                            },
+                            {
+                                "eval": {
+                                    "visitor.id": "visitorId",
+                                    "visitor.clicks": "numClicks"
+                                }
+                            },
+                            {
+                                "reduce": {
+                                    "visitors": {
+                                        "list": "visitor"
+                                    }
+                                }
+                            }
+                        ],
+                        [
+                            {
+                                "group": {
+                                    "group": [
+                                        "accountId"
+                                    ],
+                                    "fields": [
+                                        {
+                                            "numClicks": {
+                                                "count": null
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "sort": [
+                                    "-numClicks",
+                                    "accountId"
+                                ]
+                            },
+                            {
+                                "eval": {
+                                    "account.id": "if(isNull(accountId)||accountId==\"\", \"(none)\", accountId)",
+                                    "account.clicks": "numClicks"
+                                }
+                            },
+                            {
+                                "reduce": {
+                                    "accounts": {
+                                        "list": "account"
+                                    }
+                                }
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "join": {
+                        "fields": []
+                    }
+                }
+            ],
+            "streamId": "74236b40-a4fd-48b9-9680-e7eefa86145c",
+            "params": {
+                "blacklist": "apply",
+                "includeAnonymous": "visitorId",
+                "languageCode": null,
+                "segmentId": null,
+                "timeSeries": {
+                    "period": "dayRange",
+                    "first": 1683518400000,
+                    "count": 30
+                },
+                "appId": -323232,
+                "guideId": "wZqkE9P92nMvErPFZesZsqA4tSk",
+                "uiElementId": "pendo-button-faf0d608"
+            },
+            "requestId": "GuideElementClicks-rId-d0b9d5e6-2927-456a-8c83-6105472011af"
+        }
+    ]
+  }

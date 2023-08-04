@@ -20,25 +20,22 @@
                 //excludeAllText: true,
                 //DisableGuides: True,
                 visitor: {
-                    id: user_id,   // Required if user is logged in
-                    email: user_email, // Recommended if using Pendo Feedback, or NPS Email
-                    full_name: user_full_name,// Recommended if using Pendo Feedback
-                    language: "en_GB",
-                    random: user_random_data
+                    id: "EE-519Visitor",   // Required if user is logged in
                 },
-
                 account: {
-                    id: user_account_id, // Highly recommended
-                    type: "AccountType"// Optional
+                    id: "EE-519AccountThree", // Highly recommended
                 },
-
                 parentAccount: {
-                    id: 'Bungie',
-                    name: 'Bungo',
-                    parentAccountOnly: 'yes'
+                    id: "EE-519", // Highly recommended
+                },
+                events: {
+                    ready: function () {
+                        console.log('calling clearSession');
+                        pendo.clearSession();
+                    }
                 }
             });
-        })('a93e68a6-46fd-443a-699f-aa31985c066d');
+        })('87bea2e6-3d7c-47d8-76fd-2b2c05f0057a');
     </script>
 
     <title>Page Title</title>

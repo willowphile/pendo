@@ -1,4 +1,4 @@
-
+/*
 var user_id = 'Savathûn';
 var user_email = 'alisyn.collins+savathun@gmail.com';
 var user_full_name = 'Savathun, the Witch Queen';
@@ -7,6 +7,18 @@ var user_language = 'en_GB';
 var user_random_data = 'Subjugant to None';
 var user_boolean = true;
 var user_account_type = 'Darkness'
+*/
+
+
+/* var user_id = 'Xivu';
+var user_email = 'alisyn.collins+xivu@gmail.com';
+var user_full_name = 'Xivu Arath';
+var user_account_id = 'Hive';
+var user_language = 'en_GB';
+var user_random_data = 'God of War';
+var user_boolean = true;
+var user_account_type = 'Darkness' */
+
 
 /*
 var user_id = 'IkoraRey';
@@ -16,16 +28,6 @@ var user_account_id = 'Operation_Babydog';
 var user_language = 'en_GB';
 var user_random_data = '';
 var user_boolean = true;
-*/
-
-/*
-var user_id = 'AnaBray';
-var user_email = 'alisyn.collins+2@gmail.com';
-var user_full_name = 'Ana Bray';
-var user_account_id = 'AccountExcludeTest1';
-var user_language = 'en_GB';
-var user_random_data = 'AccountExcludeTest';
-var user_boolean = 1;
 */
 
 /*
@@ -99,3 +101,12 @@ var user_email = null;
 var user_full_name = null;
 var user_random_data = null;
 */
+
+var user_id = 'PetraVenj';
+var user_email = 'alisyn.collins+petra@gmail.com';
+var user_full_name = 'Petra Venj';
+var user_account_id = 'Awoken';
+var user_language = 'en_GB';
+var user_random_data = 'Regent-Commander of the Royal Awoken Guard';
+var user_boolean = true;
+var user_account_type = 'Light'
