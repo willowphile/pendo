@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="styles.css">
+   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+   <style>
+      /* Create two equal columns that floats next to each other */
+      .column {
+         float: left;
+         width: 50%;
+         padding: 10px;
+         font-size: 14px
+      }
+
+      /* Clear floats after the columns */
+      .gridRow:after {
+         content: "";
+         display: table;
+         clear: both;
+      }
+
+      form {
+         display: table;
+      }
+
+      p {
+         display: table-row;
+      }
+
+      label {
+         display: table-cell;
+      }
+
+      input {
+         display: table-cell;
+      }
+
+      .header p {
+         display: block;
+      }
+   </style>
+   <script>
+      var dt = new Date();
+      document.getElementById("datetime").innerHTML = dt.toLocaleString();
+   </script>
+   <script>
+      !function () {
+         var analytics = window.analytics = window.analytics || []; if (!analytics.initialize) if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice."); else {
+            analytics.invoked = !0; analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on", "addSourceMiddleware", "addIntegrationMiddleware", "setAnonymousId", "addDestinationMiddleware"]; analytics.factory = function (e) { return function () { if (window.analytics.initialized) return window.analytics[e].apply(window.analytics, arguments); var i = Array.prototype.slice.call(arguments); i.unshift(e); analytics.push(i); return analytics } }; for (var i = 0; i < analytics.methods.length; i++) { var key = analytics.methods[i]; analytics[key] = analytics.factory(key) } analytics.load = function (key, i) { var t = document.createElement("script"); t.type = "text/javascript"; t.async = !0; t.src = "https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js"; var n = document.getElementsByTagName("script")[0]; n.parentNode.insertBefore(t, n); analytics._loadOptions = i }; analytics._writeKey = "CukN9gNcoU2MzwxYd6ph1ldc3zkYH5Le";; analytics.SNIPPET_VERSION = "4.16.1";
+            analytics.load("CukN9gNcoU2MzwxYd6ph1ldc3zkYH5Le");
+            analytics.page();
+            analytics.identify("secondSegmentVisitor", {
+               name: "secondSegmentVisitor",
+               random: "secondSegmentVisitor",
+               timestamp: dt
+            });
+            analytics.group('segmentecondSAccount', {
+               name: "secondSegmentAccount",
+               thisIsOnlyASegmentMetadataField: "oh hai"
+            });
+         }
+      }();
+   </script>
+   <!--    <script>
+      !function () {
+         var analytics = window.analytics = window.analytics || []; if (!analytics.initialize) if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice."); else {
+            analytics.invoked = !0; analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on", "addSourceMiddleware", "addIntegrationMiddleware", "setAnonymousId", "addDestinationMiddleware"]; analytics.factory = function (e) { return function () { var t = Array.prototype.slice.call(arguments); t.unshift(e); analytics.push(t); return analytics } }; for (var e = 0; e < analytics.methods.length; e++) { var key = analytics.methods[e]; analytics[key] = analytics.factory(key) } analytics.load = function (key, e) { var t = document.createElement("script"); t.type = "text/javascript"; t.async = !0; t.src = "https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js"; var n = document.getElementsByTagName("script")[0]; n.parentNode.insertBefore(t, n); analytics._loadOptions = e }; analytics._writeKey = "yg9SWXMqQrvcvm5og2wyxiomzZ9QkMAf"; analytics.SNIPPET_VERSION = "4.13.2";
+            analytics.load("yg9SWXMqQrvcvm5og2wyxiomzZ9QkMAf");
+            analytics.page();
+            analytics.identify(
+               "teamNameTest2",
+               {
+                  name: "teamNameTest",
+                  random: "teamNameTest",
+                  timestamp: dt
+               },
+               () => {
+                  var team = true;
+
+                  if (team) {
+                     analytics.group("teamNameTestAccount2", {
+                        name: "teamName"
+                     });
+                     console.log(team);
+                  }
+                  
+               }
+            );
+         }
+      }();
+   </script> -->
+   <title>Segment.io/.com/whatever</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="shortcut icon" type="image/jpg" href="engram.ico" />
+</head>
+
+<body>
+   <div class="header">
+      <h1>Oh hai</h1>
+      <p>I am a website</p>
+   </div>
+
+   <!--Navigation bar-->
+   <div id="nav-placeholder">
+
+   </div>
+
+   <script>
+      $(function () {
+         $("#nav-placeholder").load("navbar.html");
+      });
+   </script>
+   <!--end of Navigation bar-->
+
+   <div class="row">
+      <div class="side">
+         <h2>Stuff</h2>
+         <img src="img/rainbowEmblem.png" width="300"><br>
+         <img src="img/catEmblem.png" width="300"><br>
+         <img src="img/heartEmblem.png" width="300"><br>
+         <br>
+         <p>
+            This is randomized text.
+            -
+            <SCRIPT LANGUAGE="JAVASCRIPT">
+               var r_text = new Array();
+               r_text[0] = "Lorem ipsum nightstalker fatebringer.";
+               r_text[1] = "Lorem ipsum witherhoard ikelos.";
+               r_text[2] = "Lorem ipsum stasis thunderlord.";
+
+               var i = Math.floor(r_text.length * Math.random());
+
+               document.write(r_text[i]);
+
+            </script>
+         </p>
+         <p>
+            The current time is:
+            <span id="datetime"></span>
+         </p>
+      </div>
+      <div class="main">
+         <div>
+            <h2>Segment.io Visitor Testing</h2>
+
+            <form>
+               <p>
+                  <label for="visitorField1">Enter a new visitorId: </label>
+                  <input type="text" id="visitorField1" value="segmentTestArthur"
+                     style='border:solid 1px black;height: 30px;width: 300px;vertical-align: middle;font-family: myCustomFont;'>
+               </p>
+               <p>
+                  <label for="visitorField2">What is your name: </label>
+                  <input type="text" id="visitorField2" value="King Arthur of the Britons"
+                     style='border:solid 1px black;height: 30px;width: 300px;vertical-align: middle;font-family: myCustomFont;'>
+               </p>
+               <p>
+                  <label for="toSeekTheGrail">What is your quest: </label>
+                  <input type="text" id="toSeekTheGrail" value="To seek the Grail"
+                     style='border:solid 1px black;height: 30px;width: 300px;vertical-align: middle;font-family: myCustomFont;'>
+               </p>
+               <p>
+                  <label for="africanOrEuropean">What is the airspeed velocity of an unladen swallow: </label>
+                  <input type="text" id="africanOrEuropean" value="what? i don't know that"
+                     style='border:solid 1px black;height: 30px;width: 300px;vertical-align: middle;font-family: myCustomFont;'>
+               </p>
+            </form>
+            <br>
+            <button onclick="identifyNewVisitor()" class="btn void"
+               style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>identify!</button>
+            <script type="text/javascript">
+               function identifyNewVisitor() {
+                  analytics.identify(document.getElementById("visitorField1").value, {
+                     name: document.getElementById("visitorField2").value,
+                     quest: document.getElementById("toSeekTheGrail").value,
+                     airspeedVelocity: document.getElementById("africanOrEuropean").value,
+                  });
+               }
+            </script>
+
+         </div>
+
+
+         <h2>List View or Grid View</h2>
+         <p>Click on a button to choose list view or grid view.</p>
+         <div id="btnContainer">
+            <button class="btn" onclick="listView()"><i class="fa fa-bars"></i> List</button>
+            <button class="btn active" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+         </div>
+         <br>
+         <div class="gridRow">
+            <div class="column" style="background-color:#3EB4CC;">
+               <h2>Fahrenheit to Celcius</h2>
+               <p>
+                  <label>Fahrenheit</label>
+                  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
+                     oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+               </p>
+               <p>Celcius: <span id="outputCelcius"></span></p>
+               <script>
+                  function temperatureConverter(valNum) {
+                     valNum = parseFloat(valNum);
+                     document.getElementById("outputCelcius").innerHTML = (valNum - 32) / 1.8;
+                  }
+               </script>
+            </div>
+            <div class="column" style="background-color:#B79FBC;">
+               <h2>Celcius to Fahrenheit</h2>
+               <p>
+                  <label>Celcius</label>
+                  <input id="inputCelcius" type="number" placeholder="Celcius"
+                     oninput="temperatureConverterCtoF(this.value)" onchange="temperatureConverterCtoF(this.value)">
+               </p>
+               <p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+               <script>
+                  function temperatureConverterCtoF(valCtoF) {
+                     valCtoF = parseFloat(valCtoF);
+                     document.getElementById("outputFahrenheit").innerHTML = (valCtoF * 1.8) + 32;
+                  }
+               </script>
+            </div>
+         </div>
+         <div class="gridRow">
+            <div class="column" style="background-color:#43edac;">
+               <h2>I</h2>
+               <p>Cheese on toast squirty cheese brie. Blue castello cut the cheese danish fontina rubber cheese boursin
+                  roquefort rubber cheese cow. Cauliflower cheese edam paneer everyone loves cauliflower cheese who
+                  moved my
+                  cheese pepper jack boursin. Airedale mozzarella cheese strings blue castello cauliflower cheese cheese
+                  on
+                  toast cream cheese cheese strings. Croque monsieur say cheese cheesecake.</p>
+            </div>
+            <div class="column" style="background-color:#cdf5d4;">
+               <h2>II</h2>
+               <p>Roquefort melted cheese st. agur blue cheese. Pecorino cream cheese bavarian bergkase melted cheese
+                  smelly
+                  cheese cheese and wine cut the cheese cheddar. Parmesan cheese on toast ricotta brie mozzarella feta
+                  chalk
+                  and cheese when the cheese comes out everybody's happy. Bocconcini cheese and biscuits bocconcini
+                  pepper
+                  jack taleggio the big cheese chalk and cheese melted cheese. Caerphilly mozzarella bocconcini
+                  mozzarella.
+               </p>
+            </div>
+         </div>
+         <div class="gridRow">
+            <div class="column" style="background-color:#ba8aff;">
+               <h2>III</h2>
+               <p>Gouda who moved my cheese melted cheese. Bavarian bergkase feta danish fontina cottage cheese gouda
+                  the big
+                  cheese gouda when the cheese comes out everybody's happy. Cheeseburger croque monsieur when the cheese
+                  comes
+                  out everybody's happy caerphilly bavarian bergkase bavarian bergkase cut the cheese ricotta. Cheese
+                  and
+                  biscuits babybel cream cheese roquefort edam airedale pepper jack mozzarella. Goat cheesecake.</p>
+            </div>
+            <div class="column" style="background-color:#ede2f5;">
+               <h2>IV</h2>
+               <p>Bavarian bergkase pecorino emmental. Chalk and cheese cheese slices queso cheese on toast port-salut
+                  cheesy
+                  feet babybel cheese and wine. Say cheese chalk and cheese cheese strings who moved my cheese brie
+                  cheesy
+                  feet port-salut port-salut. Goat paneer cheesy grin the big cheese edam edam bocconcini cauliflower
+                  cheese.
+                  Cheese triangles the big cheese.</p>
+            </div>
+         </div>
+         <script>
+            // Get the elements with class="column"
+            var elements = document.getElementsByClassName("column");
+
+            // Declare a loop variable
+            var i;
+
+            // List View
+            function listView() {
+               for (i = 0; i < elements.length; i++) {
+                  elements[i].style.width = "100%";
+               }
+            }
+
+            // Grid View
+            function gridView() {
+               for (i = 0; i < elements.length; i++) {
+                  elements[i].style.width = "50%";
+               }
+            }
+
+            /* Optional: Add active class to the current button (highlight it) */
+            var container = document.getElementById("btnContainer");
+            var btns = container.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+               btns[i].addEventListener("click", function () {
+                  var current = document.getElementsByClassName("active");
+                  current[0].className = current[0].className.replace(" active", "");
+                  this.className += " active";
+               });
+            }
+         </script>
+      </div>
+</body>
+
+</html>
