@@ -5,143 +5,130 @@
     },
     "requests": [
         {
-            "name": "GuideElementsActivity",
+            "name": "data-explorer-trackEvents-iterative",
             "pipeline": [
                 {
                     "source": {
-                        "guideEvents": {
-                            "guideId": "wZqkE9P92nMvErPFZesZsqA4tSk",
+                        "trackEvents": {
+                            "trackTypeId": "4eymNo8OhWb2cKCzralHyEXmrDI",
                             "blacklist": "apply"
                         },
                         "timeSeries": {
-                            "period": "dayRange",
-                            "first": 1683518400000,
-                            "count": 30
+                            "period": "daily",
+                            "first": "dateAdd(startOfPeriod(\"daily\",now()),-30,\"days\")",
+                            "last": "dateAdd(startOfPeriod(\"daily\",now()),-1,\"days\")"
                         }
                     }
-                },
-                {
-                    "filter": "eventSubType(type) == \"guideActivity\""
-                },
-                {
-                    "filter": "uiElementType != \"\""
-                },
-                {
-                    "filter": "uiElementId == \"pendo-button-faf0d608\""
                 },
                 {
                     "identified": "visitorId"
                 },
                 {
-                    "fork": [
-                        [
-                            {
-                                "group": {
-                                    "group": [
-                                        "guideId",
-                                        "uiElementId",
-                                        "elementType",
-                                        "isDeleted"
-                                    ],
-                                    "fields": [
-                                        {
-                                            "numClicks": {
-                                                "count": null
-                                            }
-                                        }
-                                    ]
-                                }
-                            }
-                        ],
-                        [
-                            {
-                                "group": {
-                                    "group": [
-                                        "uiElementId",
-                                        "uiElementText"
-                                    ],
-                                    "fields": [
-                                        {
-                                            "mostRecent": {
-                                                "max": "browserTime"
-                                            }
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "sort": [
-                                    "mostRecent"
-                                ]
-                            }
-                        ],
-                        [
-                            {
-                                "group": {
-                                    "group": [
-                                        "uiElementId",
-                                        "uiElementActions"
-                                    ],
-                                    "fields": [
-                                        {
-                                            "mostRecent": {
-                                                "max": "browserTime"
-                                            }
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "sort": [
-                                    "mostRecent"
-                                ]
-                            }
-                        ]
-                    ]
+                    "eval": {
+                        "pageType_custom_event": "properties.pageType"
+                    }
                 },
                 {
-                    "join": {
+                    "eval": {
+                        "pageType_custom_event": "if(isString(pageType_custom_event), trim(trim(pageType_custom_event, \"\\n\"), \" \"), pageType_custom_event)"
+                    }
+                },
+                {
+                    "filter": "(contains([\"lesson-introduction\"], pageType_custom_event))"
+                },
+                {
+                    "group": {
+                        "group": [
+                            "trackTypeId",
+                            "day"
+                        ],
                         "fields": [
-                            "uiElementId"
+                            {
+                                "totalEvents": {
+                                    "sum": "numEvents"
+                                }
+                            }
                         ]
                     }
                 },
                 {
                     "select": {
-                        "guideId": "guideId",
-                        "uiElementId": "uiElementId",
-                        "uiElementType": "elementType",
-                        "uiElementActions": "uiElementActions",
-                        "uiElementText": "uiElementText",
-                        "numClicks": "numClicks",
-                        "isDeleted": "isDeleted"
+                        "day": "day",
+                        "trackTypeId": "trackTypeId",
+                        "yAxis": "totalEvents"
                     }
                 }
             ],
-            "streamId": "356bf18e-c94d-485f-a875-a6ce5a99dc3d",
-            "params": {
-                "blacklist": "apply",
-                "includeAnonymous": "visitorId",
-                "languageCode": null,
-                "segmentId": null,
-                "timeSeries": {
-                    "period": "dayRange",
-                    "first": 1683518400000,
-                    "count": 30
+            "streamId": "6416ddb1-c767-4651-b310-8188deb42667",
+            "params": {},
+            "displayName": "data-explorer-trackEvents-lessonTypeDuration-iterative",
+            "requestId": "data-explorer-trackEvents-iterative-rId-a8d0feed-a8ef-4af3-8316-9ce29f74bae4",
+            "settings": {}
+        },
+        {
+            "name": "data-explorer-trackEvents-aggregate",
+            "pipeline": [
+                {
+                    "source": {
+                        "trackEvents": {
+                            "trackTypeId": "4eymNo8OhWb2cKCzralHyEXmrDI",
+                            "blacklist": "apply"
+                        },
+                        "timeSeries": {
+                            "period": "dayRange",
+                            "first": "dateAdd(startOfPeriod(\"daily\",now()),-30,\"days\")",
+                            "last": "dateAdd(startOfPeriod(\"daily\",now()),-1,\"days\")"
+                        }
+                    }
                 },
-                "appId": -323232,
-                "guideId": "wZqkE9P92nMvErPFZesZsqA4tSk",
-                "currentIds": [
-                    "pendo-button-a23571d1",
-                    "pendo-button-99203225",
-                    "pendo-button-07d908e9",
-                    "pendo-button-079d2acb",
-                    "pendo-button-faf0d608",
-                    "pendo-close-guide-2f02580d",
-                    "pendo-close-guide-c8e60e78"
-                ]
-            },
-            "requestId": "GuideElementsActivity-rId-62832fba-5883-4c01-90e3-693274989159"
+                {
+                    "identified": "visitorId"
+                },
+                {
+                    "eval": {
+                        "pageType_custom_event": "properties.pageType"
+                    }
+                },
+                {
+                    "eval": {
+                        "pageType_custom_event": "if(isString(pageType_custom_event), trim(trim(pageType_custom_event, \"\\n\"), \" \"), pageType_custom_event)"
+                    }
+                },
+                {
+                    "filter": "(contains([\"lesson-introduction\"], pageType_custom_event))"
+                },
+                {
+                    "eval": {
+                        "day": "startOfPeriod(\"dayRange\", day)"
+                    }
+                },
+                {
+                    "group": {
+                        "group": [
+                            "trackTypeId"
+                        ],
+                        "fields": [
+                            {
+                                "totalEvents": {
+                                    "sum": "numEvents"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "select": {
+                        "day": "day",
+                        "trackTypeId": "trackTypeId",
+                        "yAxis": "totalEvents"
+                    }
+                }
+            ],
+            "streamId": "d5cc5fc6-be95-4316-8781-ce31c7c142a7",
+            "params": {},
+            "displayName": "data-explorer-trackEvents-lessonTypeDuration-aggregate",
+            "requestId": "data-explorer-trackEvents-aggregate-rId-e43c7839-103b-4a42-a26e-bd5d1da4ddf6",
+            "settings": {}
         }
     ]
 }

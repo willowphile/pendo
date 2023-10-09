@@ -27,5 +27,5 @@ encoded_jwt = jwt.encode(payload, secret, algorithm='HS256')
 with open("jwtinit.js", 'w') as file:
     file.write("var newJWT = '" + encoded_jwt + "';")
 
-print(nonceValue)
-print(encoded_jwt)
+#print(nonceValue)
+#print(encoded_jwt)
