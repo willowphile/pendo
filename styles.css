@@ -110,6 +110,15 @@ p {
   width: 300px;
 }
 
+.datePicker {
+  font-size: 16px;
+  font-family: myCustomFont;
+  padding: 0.25em 0.5em;
+  background-color: #fff;
+  border: 2px solid;
+  border-radius: 4px;
+}
+
 /*buttons */
 .btn {
   border: none;
@@ -355,3 +364,22 @@ p {
   border-top: 15px solid yellow!important;
   border-right: 15px solid orange !important;
 } */
+
+select {
+  padding: 8px;
+  width: 250px;
+  font-size: 16px;
+  -webkit-appearance: button;
+  appearance: button;
+  float:none !important;
+  border: 2px solid;
+}
+
+select option {
+  padding: 30px;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}

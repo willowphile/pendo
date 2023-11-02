@@ -20,7 +20,7 @@ https://templatemo.com/tm-560-astro-motion
 
 
 
-  <script>
+  <!--   <script>
     (function (apiKey) {
       (function (p, e, n, d, o) {
         var v, w, x, y, z; o = p[d] = p[d] || {}; o._q = o._q || [];
@@ -31,9 +31,9 @@ https://templatemo.com/tm-560-astro-motion
         z = e.getElementsByTagName(n)[0]; z.parentNode.insertBefore(y, z);
       })(window, document, 'script', 'pendo');
     })('f017849c-960a-40d2-5cde-97486b2aef76');
-  </script>
- 
-<!-- delay snippet loading
+  </script> -->
+
+  <!-- delay snippet loading
   <script>
     setTimeout(function () {
       (function (apiKey) {
@@ -136,12 +136,20 @@ https://templatemo.com/tm-560-astro-motion
 
                 <script>
                   function login() {
-                    pendo.clearSession();
-                    pendo.initialize({
-                      jwt: newJWT,
-                      signingKeyName: 'alis-sing-_jdwB'
-                    });
-                    console.log(newJWT);
+                    (function (apiKey) {
+                      (function (p, e, n, d, o) {
+                        var v, w, x, y, z; o = p[d] = p[d] || {}; o._q = o._q || [];
+                        v = ['initialize', 'identify', 'updateOptions', 'pageLoad', 'track']; for (w = 0, x = v.length; w < x; ++w)(function (m) {
+                          o[m] = o[m] || function () { o._q[m === v[0] ? 'unshift' : 'push']([m].concat([].slice.call(arguments, 0))); };
+                        })(v[w]);
+                        y = e.createElement(n); y.async = !0; y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
+                        z = e.getElementsByTagName(n)[0]; z.parentNode.insertBefore(y, z);
+                      })(window, document, 'script', 'pendo');
+                      pendo.initialize({
+                        jwt: newJWT,
+                        signingKeyName: 'alis-sing-_jdwB'
+                      });
+                    })('f017849c-960a-40d2-5cde-97486b2aef76');
                   };
                 </script>
 
@@ -427,6 +435,18 @@ https://templatemo.com/tm-560-astro-motion
   <script src="js/bootstrap.min.js"></script>
   <script src="js/slick.js"></script>
   <script src="js/templatemo-script.js"></script>
+  <script>
+    !function (e, n, t, a, c) {
+      var i, o, d, s, p; for ((c = e[a] = e[a] || {})._q = c._q || [], o = 0, d = (i = ["initialize", "identify", "updateOptions", "pageLoad", "track"]).length; o < d; ++o)!function (e) {
+        c[e] = c[e] || function () {
+          c._q[e === i[0] ? "unshift" : "push"]
+          ([e].concat([].slice.call(arguments, 0)))
+        }
+      }(i[o]);
+      (s = n.createElement(t)).async = !0, s.src = "https://cdn.pendo.io/agent/static/f017849c-960a-40d2-5cde-97486b2aef76/pendo.js", (p = n.getElementsByTagName(t)
+      [0]).parentNode.insertBefore(s, p)
+    }(window, document, "script", "pendo")
+  </script>
 </body>
 
 </html>
