@@ -14,6 +14,10 @@ body {
   margin: 0;
 }
 
+button {
+  font-family: myCustomFont;
+}
+
 p {
   font-family: myCustomFont;
   font-size: 14px;

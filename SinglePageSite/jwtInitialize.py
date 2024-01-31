@@ -5,21 +5,22 @@ secret = "481e3281-8195-4bdb-6c50-6b1d3c26f008"
 nonceValue = time.time()
 
 payload = {
+    "exp": 1234565,
+    "sub":{
         "visitor": {
-            "id": "SinglePageVisitorJuan",
-            "signedVisitorMetadata": "oh heyyyy juannn"
+            "id": "SinglePageVisitor",
+            "signedVisitorMetadata": "oh heyyyy"
         },
 
         "account": {
-            "id": "SinglePageAccount1"
+            "id": "SinglePageAccount"
         },
 
         "parentAccount": {
-            "id": "SinglePageParentAccount1"
+            "id": "SinglePageParentAccount"
         },
         "nonce": nonceValue
-    }
-
+    }}
 
 encoded_jwt = jwt.encode(payload, secret, algorithm='HS256')
 

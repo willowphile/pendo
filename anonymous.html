@@ -164,6 +164,37 @@
                 </script>
 
             </div>
+            <div>
+                <script>
+                    document.body.addEventListener("click", function (evt) {
+                        console.dir(this);
+                        //note evt.target can be a nested element, not the body element, resulting in misfires
+                        //console.log(evt.target);
+                        pendo.initialize({
+                            visitor: {
+                                id: "",
+                                random: "anonymous visitor click"
+                            }
+                        });
+                    });
+                </script>
+            </div>
+            <div>
+                <p>
+                    This page re-initializes once after five seconds.
+                </p>
+                <script>
+                    function james() {
+                        pendo.initialize({
+                            visitor: {
+                                id: "",
+                                random: "automatic re-init"
+                            }
+                        });
+                    }
+                    setTimeout(james, 5000);
+                </script>
+            </div>
         </div>
     </div>
 </body>

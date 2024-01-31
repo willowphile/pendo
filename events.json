@@ -1,0 +1,469 @@
+[
+    {
+        "visitor": "653a1432f8e4ab250e52eb78",
+        "account": "653a1269f14637002340d479",
+        "url": "http://app2.myautoleap.com/#!/estimate/65487be5a232c000302a98ca",
+        "browserTime": 1699249210523,
+        "featureIds": "yvLpOCk_0Hd6vkp6b7cSmY02bEU",
+        "properties": null,
+        "eventId": "59w3qv8GAMZ4057m4vgLawivN9o",
+        "readableTime": "2023-11-06T00:40:10.523-05:00",
+        "name": "Side Nav Save"
+    },
+    {
+        "visitor": "653a1432f8e4ab250e52eb78",
+        "account": "653a1269f14637002340d479",
+        "url": "http://app2.myautoleap.com/#!/estimate/65487be5a232c000302a98ca",
+        "browserTime": 1699249370738,
+        "featureIds": "yvLpOCk_0Hd6vkp6b7cSmY02bEU",
+        "properties": null,
+        "eventId": "MQxYJgAEwij8MbjFoK2ih_gTvas",
+        "readableTime": "2023-11-06T00:42:50.738-05:00",
+        "name": "Side Nav Save"
+    },
+    {
+        "visitor": "653a13e706eef9106afddf17",
+        "account": "653a1269f14637002340d479",
+        "url": "http://app2.myautoleap.com/#!/settings/appointment-request",
+        "browserTime": 1699256440813,
+        "featureIds": "yvLpOCk_0Hd6vkp6b7cSmY02bEU",
+        "properties": null,
+        "eventId": "bTt3wFC3KKLGcIBR6Yn_CZLJBqs",
+        "readableTime": "2023-11-06T02:40:40.813-05:00",
+        "name": "Side Nav Save"
+    },
+    {
+        "visitor": "653a13e706eef9106afddf17",
+        "account": "653a1269f14637002340d479",
+        "url": "http://app2.myautoleap.com/#!/settings/appointment-request",
+        "browserTime": 1699256455077,
+        "featureIds": "yvLpOCk_0Hd6vkp6b7cSmY02bEU",
+        "properties": null,
+        "eventId": "Xm3VpgoK9HhDs6fJrU1g6X1FOmU",
+        "readableTime": "2023-11-06T02:40:55.077-05:00",
+        "name": "Side Nav Save"
+    },
+    {
+        "visitor": "653a13e706eef9106afddf17",
+        "account": "653a1269f14637002340d479",
+        "url": "http://app2.myautoleap.com/#!/estimate/65489b1ea232c000302ac4c4",
+        "browserTime": 1699257140568,
+        "featureIds": "yvLpOCk_0Hd6vkp6b7cSmY02bEU",
+        "properties": null,
+        "eventId": "1S90FblvpUvTys2eCpeQBGMM1b8",
+        "readableTime": "2023-11-06T02:52:20.568-05:00",
+        "name": "Side Nav Save"
+    },
+    {
+        "visitor": "6524133ad2eeae002b81f320",
+        "account": "63a01dd266bb6d0018ffe059",
+        "url": "http://qa.myautoleap.com/#!/estimate/6549126411a3ef002487b301",
+        "browserTime": 1699287733463,
+        "featureIds": "yvLpOCk_0Hd6vkp6b7cSmY02bEU",
+        "properties": null,
+        "eventId": "P4GgwffrU49ndegsVfpOXgi-ld4",
+        "readableTime": "2023-11-06T11:22:13.463-05:00",
+        "name": "Side Nav Save"
+    },
+    {
+        "visitor": "6524133ad2eeae002b81f320",
+        "account": "63a01dd266bb6d0018ffe059",
+        "url": "http://qa.myautoleap.com/#!/estimate/6549126411a3ef002487b301",
+        "browserTime": 1699287754383,
+        "featureIds": "yvLpOCk_0Hd6vkp6b7cSmY02bEU",
+        "properties": null,
+        "eventId": "YfN8nMA6x3340AEHFgd9AZFZzZ0",
+        "readableTime": "2023-11-06T11:22:34.383-05:00",
+        "name": "Side Nav Save"
+    },
+    {
+        "visitor": "6524133ad2eeae002b81f320",
+        "account": "63a01dd266bb6d0018ffe059",
+        "url": "http://qa.myautoleap.com/#!/estimate/6549126411a3ef002487b301",
+        "browserTime": 1699287841393,
+        "featureIds": "yvLpOCk_0Hd6vkp6b7cSmY02bEU",
+        "properties": null,
+        "eventId": "TkxPNV49EA5YjdqXHGdVvqBdJ6I",
+        "readableTime": "2023-11-06T11:24:01.393-05:00",
+        "name": "Side Nav Save"
+    },
+    {
+        "visitor": "653a1615904dbe003a459936",
+        "account": "653a1269f14637002340d479",
+        "url": "http://app2.myautoleap.com/#!/dashboard",
+        "browserTime": 1699293011446,
+        "featureIds": "yvLpOCk_0Hd6vkp6b7cSmY02bEU",
+        "properties": {
+            "display_name": "Display name*",
+            "first_name": "First name*",
+            "last_name": "Last name*"
+        },
+        "eventId": "PSKn82vy0eoS5rp9su0f1Lz7lnI",
+        "readableTime": "2023-11-06T12:50:11.446-05:00",
+        "name": "Side Nav Save"
+    },
+    {
+        "visitor": "653a1615904dbe003a459936",
+        "account": "653a1269f14637002340d479",
+        "url": "http://app2.myautoleap.com/#!/dashboard",
+        "browserTime": 1699293062158,
+        "featureIds": "YZPcRm-SlrRoDqO5eB6xaYSlVks",
+        "properties": null,
+        "eventId": "ItpW6XwpYnRTLcKW7KKsdH16AS8",
+        "readableTime": "2023-11-06T12:51:02.158-05:00",
+        "name": "Create New Customer"
+    },
+    {
+        "visitor": "653a1615904dbe003a459936",
+        "account": "653a1269f14637002340d479",
+        "url": "http://app2.myautoleap.com/#!/dashboard",
+        "browserTime": 1699293063042,
+        "featureIds": "YZPcRm-SlrRoDqO5eB6xaYSlVks",
+        "properties": null,
+        "eventId": "lG_PEBZIEqGYMCzlmPNOXhDCD7s",
+        "readableTime": "2023-11-06T12:51:03.042-05:00",
+        "name": "Create New Customer"
+    },
+    {
+        "visitor": "653a1615904dbe003a459936",
+        "account": "653a1269f14637002340d479",
+        "url": "http://app2.myautoleap.com/#!/dashboard",
+        "browserTime": 1699293066389,
+        "featureIds": "YZPcRm-SlrRoDqO5eB6xaYSlVks",
+        "properties": null,
+        "eventId": "rOE6jJGBLXp8efPiwWq6sTLkaWM",
+        "readableTime": "2023-11-06T12:51:06.389-05:00",
+        "name": "Create New Customer"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/workboard",
+        "browserTime": 1699294849277,
+        "featureIds": "yvLpOCk_0Hd6vkp6b7cSmY02bEU",
+        "properties": {
+            "display_name": "Makie Michaux",
+            "first_name": "Makie",
+            "last_name": "Michaux"
+        },
+        "eventId": "5cw3Rhiuq_y0MDV-ou_iWJxAdRQ",
+        "readableTime": "2023-11-06T13:20:49.277-05:00",
+        "name": "Side Nav Save"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/workboard",
+        "browserTime": 1699294914618,
+        "featureIds": "YZPcRm-SlrRoDqO5eB6xaYSlVks",
+        "properties": null,
+        "eventId": "VxJH36aw0P3mOzDhqH-rVlcV5To",
+        "readableTime": "2023-11-06T13:21:54.618-05:00",
+        "name": "Create New Customer"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/workboard",
+        "browserTime": 1699297239334,
+        "featureIds": "yvLpOCk_0Hd6vkp6b7cSmY02bEU",
+        "properties": {
+            "display_name": "",
+            "first_name": "",
+            "last_name": ""
+        },
+        "eventId": "3b8dTwHrbWDn5WFtrEftZAkvSEw",
+        "readableTime": "2023-11-06T14:00:39.334-05:00",
+        "name": "Side Nav Save"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/workboard",
+        "browserTime": 1699297241002,
+        "featureIds": "yvLpOCk_0Hd6vkp6b7cSmY02bEU",
+        "properties": {
+            "display_name": "",
+            "first_name": "",
+            "last_name": ""
+        },
+        "eventId": "3jOfdBG1jHbb2314RZUQecLaxvo",
+        "readableTime": "2023-11-06T14:00:41.002-05:00",
+        "name": "Side Nav Save"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/workboard",
+        "browserTime": 1699297249079,
+        "featureIds": "yvLpOCk_0Hd6vkp6b7cSmY02bEU",
+        "properties": {
+            "display_name": "Makie Test",
+            "first_name": "Makie",
+            "last_name": "Test"
+        },
+        "eventId": "RYYkXmpJOgdc_Ifbee8mRqcmJNE",
+        "readableTime": "2023-11-06T14:00:49.079-05:00",
+        "name": "Side Nav Save"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/workboard",
+        "browserTime": 1699297251884,
+        "featureIds": "YZPcRm-SlrRoDqO5eB6xaYSlVks",
+        "properties": null,
+        "eventId": "qE86RmJbl7sARwXZhGbJ02ne_Vs",
+        "readableTime": "2023-11-06T14:00:51.884-05:00",
+        "name": "Create New Customer"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/workboard",
+        "browserTime": 1699297252667,
+        "featureIds": "YZPcRm-SlrRoDqO5eB6xaYSlVks",
+        "properties": null,
+        "eventId": "yiVqdSRM3nTYN8w9czoH80dOSGk",
+        "readableTime": "2023-11-06T14:00:52.667-05:00",
+        "name": "Create New Customer"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/workboard",
+        "browserTime": 1699297301394,
+        "featureIds": "YZPcRm-SlrRoDqO5eB6xaYSlVks",
+        "properties": null,
+        "eventId": "450c8N8teUQXzNWLwaatc8fEbDM",
+        "readableTime": "2023-11-06T14:01:41.394-05:00",
+        "name": "Create New Customer"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/workboard",
+        "browserTime": 1699297453411,
+        "featureIds": "YZPcRm-SlrRoDqO5eB6xaYSlVks",
+        "properties": null,
+        "eventId": "CFS0vsXYbnd-ynn-25r5PfLfE1w",
+        "readableTime": "2023-11-06T14:04:13.411-05:00",
+        "name": "Create New Customer"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/workboard",
+        "browserTime": 1699297456503,
+        "featureIds": "YZPcRm-SlrRoDqO5eB6xaYSlVks",
+        "properties": null,
+        "eventId": "EuUl5KMXW5WmAwZe5IuzZhMXqcg",
+        "readableTime": "2023-11-06T14:04:16.503-05:00",
+        "name": "Create New Customer"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/workboard",
+        "browserTime": 1699297460985,
+        "featureIds": "yvLpOCk_0Hd6vkp6b7cSmY02bEU",
+        "properties": {
+            "display_name": "",
+            "first_name": "",
+            "last_name": ""
+        },
+        "eventId": "rvEpThgwKCC9TQYLCbbXZlTlm-I",
+        "readableTime": "2023-11-06T14:04:20.985-05:00",
+        "name": "Side Nav Save"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/workboard",
+        "browserTime": 1699297461465,
+        "featureIds": "yvLpOCk_0Hd6vkp6b7cSmY02bEU",
+        "properties": {
+            "display_name": "",
+            "first_name": "",
+            "last_name": ""
+        },
+        "eventId": "eh-6oPhQPSt8aVKybpW0vPbUAS0",
+        "readableTime": "2023-11-06T14:04:21.465-05:00",
+        "name": "Side Nav Save"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/workboard",
+        "browserTime": 1699297461936,
+        "featureIds": "yvLpOCk_0Hd6vkp6b7cSmY02bEU",
+        "properties": {
+            "display_name": "",
+            "first_name": "",
+            "last_name": ""
+        },
+        "eventId": "WrJAaPV_bCpktdmUec1ZCGglkqg",
+        "readableTime": "2023-11-06T14:04:21.936-05:00",
+        "name": "Side Nav Save"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/workboard",
+        "browserTime": 1699297462470,
+        "featureIds": "yvLpOCk_0Hd6vkp6b7cSmY02bEU",
+        "properties": {
+            "display_name": "",
+            "first_name": "",
+            "last_name": ""
+        },
+        "eventId": "vaSlZ1ABlbUVxfJcCEvNLK-oOPc",
+        "readableTime": "2023-11-06T14:04:22.47-05:00",
+        "name": "Side Nav Save"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/workboard",
+        "browserTime": 1699297471395,
+        "featureIds": "yvLpOCk_0Hd6vkp6b7cSmY02bEU",
+        "properties": {
+            "display_name": "",
+            "first_name": "",
+            "last_name": ""
+        },
+        "eventId": "wauCwtiwQPpvzH4DrOwnQkS03Wo",
+        "readableTime": "2023-11-06T14:04:31.395-05:00",
+        "name": "Side Nav Save"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/workboard",
+        "browserTime": 1699297923760,
+        "featureIds": "yvLpOCk_0Hd6vkp6b7cSmY02bEU",
+        "properties": {
+            "display_name": "makie fun",
+            "first_name": "makie",
+            "last_name": "fun"
+        },
+        "eventId": "EkAOK0x1CjKpskF2Iw5YSnY-pGs",
+        "readableTime": "2023-11-06T14:12:03.76-05:00",
+        "name": "Side Nav Save"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/workboard",
+        "browserTime": 1699297930408,
+        "featureIds": "YZPcRm-SlrRoDqO5eB6xaYSlVks",
+        "properties": null,
+        "eventId": "pE3eAXg9d2I0kgvmFSq93ooVHo0",
+        "readableTime": "2023-11-06T14:12:10.408-05:00",
+        "name": "Create New Customer"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/workboard",
+        "browserTime": 1699297930756,
+        "featureIds": "YZPcRm-SlrRoDqO5eB6xaYSlVks",
+        "properties": null,
+        "eventId": "aVumuMxNHLKiyjKvlst91KSWaS4",
+        "readableTime": "2023-11-06T14:12:10.756-05:00",
+        "name": "Create New Customer"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/dashboard",
+        "browserTime": 1699306075269,
+        "featureIds": "yvLpOCk_0Hd6vkp6b7cSmY02bEU",
+        "properties": {
+            "display_name": "",
+            "first_name": "",
+            "last_name": ""
+        },
+        "eventId": "_QY5Ue7Cn1xxh-RE6RXsX2F9-dU",
+        "readableTime": "2023-11-06T16:27:55.269-05:00",
+        "name": "Side Nav Save"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/dashboard",
+        "browserTime": 1699306075900,
+        "featureIds": "yvLpOCk_0Hd6vkp6b7cSmY02bEU",
+        "properties": {
+            "display_name": "",
+            "first_name": "",
+            "last_name": ""
+        },
+        "eventId": "O0YsnPXN4SIWVp6EyxdFfqK-Nx4",
+        "readableTime": "2023-11-06T16:27:55.9-05:00",
+        "name": "Side Nav Save"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/dashboard",
+        "browserTime": 1699306136764,
+        "featureIds": "yvLpOCk_0Hd6vkp6b7cSmY02bEU",
+        "properties": {
+            "display_name": "Emily Miller",
+            "first_name": "Emily",
+            "last_name": "Miller"
+        },
+        "eventId": "EJgr9bduVALixL1zdvlwP0H-law",
+        "readableTime": "2023-11-06T16:28:56.764-05:00",
+        "name": "Side Nav Save"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/dashboard",
+        "browserTime": 1699306252437,
+        "featureIds": "YZPcRm-SlrRoDqO5eB6xaYSlVks",
+        "properties": null,
+        "eventId": "3eThBsjSuEaLdxE3u7pFdqSNl1U",
+        "readableTime": "2023-11-06T16:30:52.437-05:00",
+        "name": "Create New Customer"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/dashboard",
+        "browserTime": 1699306342655,
+        "featureIds": "YZPcRm-SlrRoDqO5eB6xaYSlVks",
+        "properties": null,
+        "eventId": "kqUg8zdhgdZP5_jOkxST1BwvewM",
+        "readableTime": "2023-11-06T16:32:22.655-05:00",
+        "name": "Create New Customer"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/dashboard",
+        "browserTime": 1699307398787,
+        "featureIds": "yvLpOCk_0Hd6vkp6b7cSmY02bEU",
+        "properties": {
+            "display_name": "test test",
+            "first_name": "test",
+            "last_name": "test"
+        },
+        "eventId": "0poSjU1wP1vwiNucIFLkhY0HViw",
+        "readableTime": "2023-11-06T16:49:58.787-05:00",
+        "name": "Side Nav Save"
+    },
+    {
+        "visitor": "65251b36e565110025490b1d",
+        "account": "6525162fc85268002534904d",
+        "url": "http://qa.myautoleap.com/#!/dashboard",
+        "browserTime": 1699307405754,
+        "featureIds": "YZPcRm-SlrRoDqO5eB6xaYSlVks",
+        "properties": null,
+        "eventId": "T8p2t8fKBYlTWi4A60tyvwPLoEk",
+        "readableTime": "2023-11-06T16:50:05.754-05:00",
+        "name": "Create New Customer"
+    }
+]

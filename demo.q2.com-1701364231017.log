@@ -1,0 +1,15 @@
+12:08:09.664 pendo.frames()
+12:08:09.676 VM3100:1 Uncaught TypeError: pendo.frames is not a function
+    at <anonymous>:1:7
+(anonymous) @ VM3100:1
+12:08:12.531 pendo.frames
+12:08:12.545 {setFrameVisibility: ƒ}setFrameVisibility: ƒ Eu(e)[[Prototype]]: Object
+12:08:20.563 pendo.frameId
+12:08:20.570 undefined
+12:09:18.734 window.addEventListener('click', (e) => console.log("Top Frame, url of click = " + pendo.getNormalizedUrl()));
+12:09:18.744 undefined
+12:09:30.574 window.addEventListener('click', (e) => console.log("Sub Frame, url of click = " + pendo.getNormalizedUrl()));
+12:09:30.580 undefined
+12:09:35.715 VM3472:1 Top Frame, url of click = http://demo.q2.com/salesdemo/uux.aspx#!/extension/GettingStarted_Productized/Main?tectonRoute=%7B%22tectonRoute.GettingStarted_Productized.Main.taskId%22%3A%22electronic-statements%22%7D
+12:09:38.432 VM61:1 Sub Frame, url of click = http://sdk-stg.onlineaccess1.com/sdk-nginx-stg/sdkcdn/getting-started-qsdk-stg-dbo-getting-started-qsdk-2023-09-25_210610/GettingStarted/assets/index.html?taskId=electronic-statements&tct-id=tectonRoute.GettingStarted_Productized.Main&tct-maxHeight=&tct-maxWidth=&tct-outlet-name=tectonRoute#main
+12:09:47.891 vendorapp.js:13839 setting new inactivity timeout functions
