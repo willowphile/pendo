@@ -140,6 +140,30 @@
           }
         </script>
       </div>
+      <hr>
+      <div>
+        <h2>Guides targeting multiple matching elements</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td><a class="maybeCats" href="/cats.html">first element</a></td>
+              <td>
+                <p>tooltip will target this one</p>
+                <p>by default, only clicks here will advance the guide</p>
+              </td>
+            </tr>
+            <tr>
+              <td><a class="maybeCats" href="/cats.html">second element</a></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td><a class="maybeCats" href="/cats.html">third element</a></td>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr>
       <div>
         <h2>Random script testing</h2>
         <!-- put your script here and in the script tags below so you know what you're actually testing  -->
@@ -207,7 +231,8 @@
       </div>
       <div>
         <button onclick="changeButtonText()" class="btn void" id="changeButton"
-          style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>click me please</button>
+          style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>click me
+          please</button>
         <script type="text/javascript">
           function changeButtonText() {
             document.getElementById("changeButton").innerText = "done been clicked"
