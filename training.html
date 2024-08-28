@@ -47,7 +47,8 @@
                     console.log(getProperties)
                 }
             },
-           /*  excludeAllText: false,*/
+            excludeAllText: true,
+            allowedText: ["Select All\nSome other text", "Select All\\nSome other text", "Select All", " Select All ","Test", "Test1", "Test2",'\n                    Select All\n                    Some other text\n                ']
             /* disableGuides: true  */
         });
     </script>
@@ -193,7 +194,7 @@
             /* Hidden by default */
             position: fixed;
             /* Stay in place */
-            z-index: 1;
+            z-index: 2;
             /* Sit on top */
             padding-top: 100px;
             /* Location of the box */
@@ -218,6 +219,7 @@
             padding: 20px;
             border: 1px solid #888;
             width: 80%;
+            height: 90%;
         }
 
         /* The Close Button */
@@ -290,12 +292,11 @@
             align-self: center;
         }
 
-        .julia #pendo-guide-container{
+        .julia #pendo-guide-container {
             background-color: purple !important;
             border: #000 !important;
             border-radius: 25px !important;
         }
-
     </style>
     <link rel="shortcut icon" type="image/jpg" href="engram.ico" />
 </head>
@@ -359,6 +360,23 @@
         </div>
         <div class="main">
             <div>
+                Test
+                <div>
+                    Select All
+                    <div class="red">Some other text</div>
+                </div>
+            </div>
+            <div>
+                Test1
+                <div>
+                    Select All
+                </div>
+            </div>
+            <div>
+                Test2
+            </div>
+            <hr>
+            <div>
                 <h2 id="buttonAnchor">Clicky clicky!</h2>
                 <p>There are three levels of divs here. How will the clicks behave?</p>
                 <div class=layer1>
@@ -390,13 +408,9 @@
                             custom="solar button"
                             style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>Click
                             me for a yellow event!</button>
-                        <button onclick="dummyClickRed()" class="btn red"
-                            
-                            custom="red button"
+                        <button onclick="dummyClickRed()" class="btn red" custom="red button"
                             style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>Click
-                            me
-                            for a red event!</button>
-
+                            me for a red event!</button>
                         <script type="text/javascript">
                             function dummyClickArc() {
                                 console.log("Arc click");
@@ -801,6 +815,18 @@
                         }, console.log('something bad happened'));
                     }
                 </script>
+            </div>
+            <div>
+                <details>
+                    <summary>Collapse 1</summary>
+                    <p id="hidden1">This id is "hidden1"</p>
+                    <p>There's not much to say here about Collapse 1.</p>
+                </details>
+                <details>
+                    <summary>Collapse 2</summary>
+                    <p id="hidden2">This id is "hidden2"</p>
+                    <p>Not much going on here, either.</p>
+                </details>
             </div>
         </div>
         <p id="pageAnchor" style=font-size:8px;float:right>This is where that page anchor button goes.</p>

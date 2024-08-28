@@ -234,6 +234,38 @@
       </div>
       <hr>
       <div>
+        <h2>addTransforms - replace query params</h2>
+        new query string: <input type="text" class="textbox" id="replaceKeys" value="boringWebPageName">
+        <button onclick="replaceKeys()" class="btn arc" id="replaceKeyButton"
+          style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>replace!</button>
+        <p>*you can't replace the pendo-added one for title</p>
+        <script type="text/javascript">
+          function replaceKeys() {
+            var newQueryString = document.getElementById("replaceKeys").value;
+            pendo.location.addTransforms([{
+              'attr': 'search',
+              'action': 'Replace',
+              'data': [newQueryString]
+            }]);
+            console.log(newQueryString)
+          }
+        </script>
+        <xmp style='font-size: 10px;'>
+          <script type="text/javascript">
+            function replaceKeys() {
+              var newQueryString = document.getElementById("replaceKeys").value;
+              pendo.location.addTransforms([{
+                'attr': 'search',
+                'action': 'Replace',
+                'data': [newQueryString]
+              }]);
+              console.log(newQueryString)
+            }
+          </script>
+        </xmp>
+      </div>
+      <hr>
+      <div>
         <h2>reset to original URL</h2>
         <button onclick="reset()" class="btn arc" id="resetButton"
           style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>reset the url!</button>

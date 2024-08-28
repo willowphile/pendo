@@ -5,20 +5,36 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <!-- comment this script out to not use the data layer visitor and fall back to the default set in GTM -->
     <script>
-        window.dataLayer = window.dataLayer || [];
-        dataLayer.push({
-            'visitorId': 'DataLayerVisitorVar'
-        });
+        visitorVariable = 'gtmVisitorPerson';
+        javascriptVisitor = 'gtmJsVar';
     </script>
     <script>
-        if (window.sessionStorage.getItem('javascriptVisitor') == null) { 
+        // this delays the visitor being available.
+        // the event sent below is configured in GTM to be the trigger for the Pendo script to load
+        function setVariable() {
+            window.dataLayer = window.dataLayer || [];
+            dataLayer.push({
+                'visitorId': visitorVariable,
+                'javascriptVisitor': javascriptVisitor,
+                'event': 'variablesSet'
+            });
+            
+            console.log("variables set and pushed")
+        }
+        setTimeout(setVariable, 3000);
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+    </script>
+    <!--     <script>
+        if (window.sessionStorage.getItem('javascriptVisitor') == null) {
             window.sessionStorage.setItem('javascriptVisitor', 'sessionStorageVisitorVar');
             console.log('javascriptVisitor');
         } else {
             console.log("it's not null");
             console.log(window.sessionStorage.getItem('javascriptVisitor'));
-        }
-    </script>
+        };
+    </script> -->
     <!-- this is the gtm tag default out of the box -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
@@ -30,7 +46,7 @@
         })(window, document, 'script', 'dataLayer', 'GTM-WKHRP5F');
     </script>
 
-    <title>Page Title</title>
+    <title>GTM with Data Layer Vars</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
@@ -48,17 +64,17 @@
         <p>I use Google Tag Manager</p>
     </div>
 
-  <!--Navigation bar-->
-  <div id="nav-placeholder">
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
 
-  </div>
+    </div>
 
-  <script>
-    $(function () {
-      $("#nav-placeholder").load("navbar.html");
-    });
-  </script>
-  <!--end of Navigation bar-->
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("navbar.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
 
     <div class="row">
         <div class="side">
