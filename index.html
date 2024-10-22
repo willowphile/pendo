@@ -83,7 +83,18 @@
   <div class="header">
     <h1>Oh hai</h1>
     <p>I am Alisyn's test site</p>
+    <p id="visitorHeader"></p>
+    <script>
+      function visitorHeader() {
+          window.setInterval(function getvisitorHeader() {
+              var dt = new Date();
+              document.getElementById("visitorHeader").innerHTML = pendo.getVisitorId();
+          }, 1000);
+      }
+      setTimeout(visitorHeader, 5000);
+  </script>
   </div>
+  
 
   <!--Navigation bar-->
   <div id="nav-placeholder">
