@@ -1,3 +1,12 @@
+var user_id = 'AgathaHarkness';
+var user_email = 'alisyn.collins+agatha@gmail.com';
+var user_full_name = 'Agatha Harkness';
+var user_account_id = 'Salemites';
+var user_language = 'en_US';
+var user_random_data = 'Señor Scratchy';
+var user_boolean = true;
+var user_account_type = 'Magic'
+
 /*
 var user_id = 'Savathûn';
 var user_email = 'alisyn.collins+savathun@gmail.com';
@@ -102,11 +111,11 @@ var user_full_name = null;
 var user_random_data = null;
 */
 
-var user_id = 'PetraVenj';
+/* var user_id = 'PetraVenj';
 var user_email = 'alisyn.collins+petra@gmail.com';
 var user_full_name = 'Petra Venj';
 var user_account_id = 'Awoken';
 var user_language = 'en_GB';
 var user_random_data = 'Regent-Commander of the Royal Awoken Guard';
 var user_boolean = true;
-var user_account_type = 'Light'
+var user_account_type = 'Light' */

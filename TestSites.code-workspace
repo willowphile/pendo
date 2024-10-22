@@ -6,5 +6,8 @@
         {
             "path": "../EscEng"
         }
-    ]
+    ],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "EscEng"
+    }
 }
