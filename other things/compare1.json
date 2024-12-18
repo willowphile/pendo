@@ -1,134 +1,168 @@
-{
-    "response": {
-        "location": "request",
-        "mimeType": "application/json"
+[
+    {
+        "count": 184
     },
-    "requests": [
-        {
-            "name": "data-explorer-trackEvents-iterative",
-            "pipeline": [
-                {
-                    "source": {
-                        "trackEvents": {
-                            "trackTypeId": "4eymNo8OhWb2cKCzralHyEXmrDI",
-                            "blacklist": "apply"
-                        },
-                        "timeSeries": {
-                            "period": "daily",
-                            "first": "dateAdd(startOfPeriod(\"daily\",now()),-30,\"days\")",
-                            "last": "dateAdd(startOfPeriod(\"daily\",now()),-1,\"days\")"
-                        }
-                    }
-                },
-                {
-                    "identified": "visitorId"
-                },
-                {
-                    "eval": {
-                        "pageType_custom_event": "properties.pageType"
-                    }
-                },
-                {
-                    "eval": {
-                        "pageType_custom_event": "if(isString(pageType_custom_event), trim(trim(pageType_custom_event, \"\\n\"), \" \"), pageType_custom_event)"
-                    }
-                },
-                {
-                    "filter": "(contains([\"lesson-introduction\"], pageType_custom_event))"
-                },
-                {
-                    "group": {
-                        "group": [
-                            "trackTypeId",
-                            "day"
-                        ],
-                        "fields": [
-                            {
-                                "totalEvents": {
-                                    "sum": "numEvents"
-                                }
-                            }
-                        ]
-                    }
-                },
-                {
-                    "select": {
-                        "day": "day",
-                        "trackTypeId": "trackTypeId",
-                        "yAxis": "totalEvents"
-                    }
-                }
-            ],
-            "streamId": "6416ddb1-c767-4651-b310-8188deb42667",
-            "params": {},
-            "displayName": "data-explorer-trackEvents-lessonTypeDuration-iterative",
-            "requestId": "data-explorer-trackEvents-iterative-rId-a8d0feed-a8ef-4af3-8316-9ce29f74bae4",
-            "settings": {}
-        },
-        {
-            "name": "data-explorer-trackEvents-aggregate",
-            "pipeline": [
-                {
-                    "source": {
-                        "trackEvents": {
-                            "trackTypeId": "4eymNo8OhWb2cKCzralHyEXmrDI",
-                            "blacklist": "apply"
-                        },
-                        "timeSeries": {
-                            "period": "dayRange",
-                            "first": "dateAdd(startOfPeriod(\"daily\",now()),-30,\"days\")",
-                            "last": "dateAdd(startOfPeriod(\"daily\",now()),-1,\"days\")"
-                        }
-                    }
-                },
-                {
-                    "identified": "visitorId"
-                },
-                {
-                    "eval": {
-                        "pageType_custom_event": "properties.pageType"
-                    }
-                },
-                {
-                    "eval": {
-                        "pageType_custom_event": "if(isString(pageType_custom_event), trim(trim(pageType_custom_event, \"\\n\"), \" \"), pageType_custom_event)"
-                    }
-                },
-                {
-                    "filter": "(contains([\"lesson-introduction\"], pageType_custom_event))"
-                },
-                {
-                    "eval": {
-                        "day": "startOfPeriod(\"dayRange\", day)"
-                    }
-                },
-                {
-                    "group": {
-                        "group": [
-                            "trackTypeId"
-                        ],
-                        "fields": [
-                            {
-                                "totalEvents": {
-                                    "sum": "numEvents"
-                                }
-                            }
-                        ]
-                    }
-                },
-                {
-                    "select": {
-                        "day": "day",
-                        "trackTypeId": "trackTypeId",
-                        "yAxis": "totalEvents"
-                    }
-                }
-            ],
-            "streamId": "d5cc5fc6-be95-4316-8781-ce31c7c142a7",
-            "params": {},
-            "displayName": "data-explorer-trackEvents-lessonTypeDuration-aggregate",
-            "requestId": "data-explorer-trackEvents-aggregate-rId-e43c7839-103b-4a42-a26e-bd5d1da4ddf6",
-            "settings": {}
-        }
-    ]
-}
+    {
+        "visitorList": [
+            "a-eda@nec.com",
+            "a-mori_cj@nec.com",
+            "a-yurugi@nec.com",
+            "ahosokawa@nec.com",
+            "ai.asai@nec.com",
+            "ak-ishizuka@nec.com",
+            "arakuta@nec.com",
+            "c-tsuji_ct@nec.com",
+            "chiharu.moriya@nec.com",
+            "chihiro-miyawaki@nec.com",
+            "d-takeyama@nec.com",
+            "d-uehara@nec.com",
+            "daiki-harasawa@nec.com",
+            "e-honma@nec.com",
+            "ebihara-y@nec.com",
+            "f-sasaki@nec.com",
+            "fukasawa.hiroki.2@nec.com",
+            "fukumoto-ct@nec.com",
+            "futamura-k@nec.com",
+            "h-fujii-zx@ncontr.com",
+            "h-hamada@nec.com",
+            "h-koshihata@nec.com",
+            "h-sugekawa@nec.com",
+            "h.machida@nec.com",
+            "hiro-oota@nec.com",
+            "hiroaki-kumagai@nec.com",
+            "hiroi-s@nec.com",
+            "hiromu-inoue@nec.com",
+            "hitoshi.takemoto.cj@nec.com",
+            "i.nakanaga@nec.com",
+            "ishii_k@nec.com",
+            "j-miyamori@nec.com",
+            "jun-oana@nec.com",
+            "junko-yuasa@nec.com",
+            "junko_ninbe@nec.com",
+            "k-enuma_bk@nec.com",
+            "k-esue@nec.com",
+            "k-ishikawa.dl.jp@nec.com",
+            "k-uchida68@nec.com",
+            "k-yasui-knk@nec.com",
+            "kamiyama_kei@nec.com",
+            "karen-maezawa@nec.com",
+            "kazunori.otsuka@nec.com",
+            "kazuto-sugi@nec.com",
+            "kenji-takeuchi@nec.com",
+            "kobahir.n@nec.com",
+            "kobayashi-sho@nec.com",
+            "kotaro-goto@nec.com",
+            "kubo.konoi9@nec.com",
+            "kubomoto_bx@nec.com",
+            "kwmr1993@nec.com",
+            "kyamamoto-ew@nec.com",
+            "m-asai.aj@nec.com",
+            "m-eno@nec.com",
+            "m-hattori@nec.com",
+            "m-kamon-mk@nec.com",
+            "m-katsuki-ah@nec.com",
+            "m-kuroyama@nec.com",
+            "m-okabayashi@nec.com",
+            "m-okuda-bk@nec.com",
+            "m-onodera64@nec.com",
+            "m-shirahashi@nec.com",
+            "m-tani_ct@nec.com",
+            "m-tsukada-ab@nec.com",
+            "m-umeda@nec.com",
+            "m-usuda@nec.com",
+            "m.hama@nec.com",
+            "m.yamato@nec.com",
+            "mai-mizoguchi-tf@nec.com",
+            "maikof1984@nec.com",
+            "manabusato@nec.com",
+            "marie.kani@nec.com",
+            "masaaki-ryoke@nec.com",
+            "minowa.yuri@nec.com",
+            "mitsuhiro-fukumoto@nec.com",
+            "mitsuhiro-yokoyama@nec.com",
+            "mo-kumon@nec.com",
+            "mochizuki2019@nec.com",
+            "momoka-eguchi@nec.com",
+            "morisugi@nec.com",
+            "mukunoki-f@nec.com",
+            "n-akura@nec.com",
+            "n-kitoh@nec.com",
+            "n-koyama.ykk@nec.com",
+            "n.sugimura@nec.com",
+            "n_hkizm@nec.com",
+            "nakagawa-tom@ncontr.com",
+            "nakamura-yoshiyuki@nec.com",
+            "nakamura.tr@nec.com",
+            "nakamurayu@nec.com",
+            "nakatetsu@nec.com",
+            "okamoto12445@nec.com",
+            "okuyama-yoshiaki@nec.com",
+            "r-hirakoso@nec.com",
+            "r-tobina@nec.com",
+            "ri-kawano@ncontr.com",
+            "riku-ushikoshi@nec.com",
+            "rio-sakaida@nec.com",
+            "rurina-chiba@nec.com",
+            "ryota-fujii@nec.com",
+            "ryunosuke-soma@nec.com",
+            "ryusa.k-takahashi@nec.com",
+            "s-enomoto.fg@nec.com",
+            "s-ido@nec.com",
+            "s-oashi@nec.com",
+            "s-toyomasu@nec.com",
+            "s_kitano@nec.com",
+            "satomi-mito@nec.com",
+            "satoshi@nec.com",
+            "serada@nec.com",
+            "sh-ueda@nec.com",
+            "sh-yamada@nec.com",
+            "shinichimyodo@ncontr.com",
+            "shun-ohara@nec.com",
+            "soushi-hanatate@nec.com",
+            "t-hirano_az@nec.com",
+            "t-masugi-ah@nec.com",
+            "t-nakamura-ub@nec.com",
+            "t-namatame@nec.com",
+            "t-narita01@nec.com",
+            "t-nishibori@nec.com",
+            "t-ogura@nec.com",
+            "t-saitou-ft@nec.com",
+            "t_satou_1004@nec.com",
+            "t_shirai@nec.com",
+            "ta-atsumi@nec.com",
+            "ta-hayakawa@nec.com",
+            "ta-mizuno@nec.com",
+            "taguchi-junya@nec.com",
+            "takahiro-sakuma-vd@nec.com",
+            "takahirokan@nec.com",
+            "takayuki-eguchi@nec.com",
+            "takeshima-sara@nec.com",
+            "takezawa.ryosuke@nec.com",
+            "tanabe.yo@nec.com",
+            "tk.hasegawa@nec.com",
+            "tks-sasaki@nec.com",
+            "tmk-okamoto@nec.com",
+            "tsukamoto_bu@nec.com",
+            "umehara.yoshitaka@nec.com",
+            "w-yoshinari@nec.com",
+            "w.yuta@nec.com",
+            "wada_h@nec.com",
+            "y-kamo@nec.com",
+            "y-kubo@nec.com",
+            "y-mita-ax@nec.com",
+            "y-ogihara@nec.com",
+            "y-taki@nec.com",
+            "y-terada@nec.com",
+            "y-tsuruoka@nec.com",
+            "y.takeba@nec.com",
+            "yasu-handa@nec.com",
+            "yh-takahashi@nec.com",
+            "yo.muramatsu@nec.com",
+            "yoshinari@nec.com",
+            "yuki.naka@nec.com",
+            "yukofujiwara@nec.com",
+            "yumiko-nakaya@nec.com",
+            "zhm94872@nec.com"
+        ]
+    }
+]

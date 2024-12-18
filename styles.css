@@ -24,6 +24,16 @@ p {
   margin: 0;
 }
 
+#pendo-button-a85e35bb:active {
+  color: green !important;
+  margin: 15 !important;
+}
+
+#pendo-button-a85e35bb:focus {
+  color: green !important;
+  margin: 15 !important;
+}
+
 .big {
   font-family: myCustomFont;
   font-size: 18px;
