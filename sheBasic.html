@@ -6,18 +6,54 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script>
         (function (apiKey) {
-            (function (p, e, n, d, o) {
-                var v, w, x, y, z; o = p[d] = p[d] || {}; o._q = o._q || [];
-                v = ['initialize', 'identify', 'updateOptions', 'pageLoad', 'track']; for (w = 0, x = v.length; w < x; ++w)(function (m) {
-                    o[m] = o[m] || function () { o._q[m === v[0] ? 'unshift' : 'push']([m].concat([].slice.call(arguments, 0))); };
-                })(v[w]);
-                y = e.createElement(n); y.async = !0; y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
-                z = e.getElementsByTagName(n)[0]; z.parentNode.insertBefore(y, z);
-            })(window, document, 'script', 'pendo');
-            // Call this whenever information about your visitors becomes available
-            // Please use Strings, Numbers, or Bools for value types.
+          (function (p, e, n, d, o) {
+            var v, w, x, y, z;
+            o = p[d] = p[d] || {};
+            o._q = [];
+            v = ['initialize', 'identify', 'updateOptions', 'pageLoad', 'track'];
+            for (w = 0, x = v.length; w < x; ++w)
+              (function (m) {
+                o[m] = o[m] || function () {
+                  o._q[m === v[0] ? 'unshift' : 'push']([m].concat([].slice.call(arguments, 0)));
+                };
+              })(v[w]);
+            y = e.createElement(n);
+            y.async = !0;
+    
+            y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
+            z = e.getElementsByTagName(n)[0];
+            z.parentNode.insertBefore(y, z);
+          })(window, document, 'script', 'pendo');
+    
+          // Call this whenever information about your visitors becomes available
+          // Please use Strings, Numbers, or Bools for value types.
+          pendo.initialize({
+            //excludeAllText: true,
+            //DisableGuides: True,
+            visitor: {
+              id: user_id,   // Required if user is logged in
+              email: user_email, // Recommended if using Pendo Feedback, or NPS Email
+              full_name: user_full_name,// Recommended if using Pendo Feedback
+              language: "en_GB",
+              random: user_random_data,
+              boolean: user_boolean
+              //date1:        user_date1
+              //date2:        user_date2
+            },
+    
+            account: {
+              id: user_account_id, // Highly recommended
+              type: user_account_type// Optional
+            },
+    
+            parentAccount: {
+              id: user_parent_account_id,
+              name: user_parent_account_name,
+              parentAccountOnly: 'yes'
+            }
+          });
         })('a93e68a6-46fd-443a-699f-aa31985c066d');
-    </script>
+      </script>
     <!-- Random snippet things 
         enableGuideTimeout: true,
         guideSeenTimeoutLength: 500,
@@ -93,40 +129,6 @@
             </div>
             <br>
             <div>
-                <button onclick="initializeClick()" class="buttonRainbow" id="initializeClick"
-                    style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>Click me
-                    to initialize!</button>
-                <script type="text/javascript">
-                    function initializeClick() {
-                        pendo.initialize({
-                            visitor: {
-                                id: user_id,   // Required if user is logged in
-                                email: user_email, // Recommended if using Pendo Feedback, or NPS Email
-                                full_name: user_full_name,// Recommended if using Pendo Feedback
-                                language: "en_GB",
-                                random: user_random_data
-                            },
-                            account: {
-                                id: user_account_id, // Highly recommended
-                                type: user_account_type// Optional
-                            },
-                            parentAccount: {
-                                id: user_parent_account_id,
-                                name: user_parent_account_name,
-                                parentAccountOnly: 'yes'
-                            },
-                            /*excludeNonGuideAnalytics: true*/
-                            //disableGuides: true  
-                            /* guides: {
-                                disabled: true
-                            }, */
-
-                        });
-                    }
-                </script>
-            </div>
-            <br>
-            <div>
                 <button onclick="getVisitorId()" class="buttonRainbow" id="getVisitorId"
                     style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>getVisitorId</button>
                 <p id="getVisitorIdOutput"></p>
@@ -136,17 +138,7 @@
                     }
                 </script>
             </div>
-            <br>
-            <div>
-                <button onclick="guideLaunch()" class="buttonRainbow" id="guideLaunch"
-                    style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>I launch a
-                    guide!</button>
-                <script type="text/javascript">
-                    function guideLaunch() {
-                        pendo.showGuideById('L1Qu6FLxckxjh_yYHVSmdCMYe1c');
-                    }
-                </script>
-            </div>
+            <br> 
             <div>
                 <p>
                     The current time is:

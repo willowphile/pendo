@@ -28,12 +28,12 @@
 
             account: {
                 id: user_account_id,
-                type: "AccountType"
+                type: user_account_type
             },
 
             parentAccount: {
-                id: 'Bungie',
-                name: 'Bungo',
+                id: user_parent_account_id,
+                name: user_parent_account_name,
                 parentAccountOnly: 'yes'
             },
             events: {
@@ -98,12 +98,12 @@
             
                     account: {
                         id: user_account_id, // Highly recommended
-                        type: "AccountType"// Optional
+                        type: user_account_type// Optional
                     },
             
                     parentAccount: {
-                        id: 'Bungie',
-                        name: 'Bungo',
+                        id: user_parent_account_id,
+                        name: user_parent_account_name,
                         parentAccountOnly: 'yes'
                     }
                 });
@@ -398,7 +398,7 @@
                     <div>
                         <button onclick="dummyClickArc()" class="btn arc"
                             id="01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789"
-                            custom="arc button" data-hanny="12345"
+                            custom="arc button" data-hanny="12345" data-anna="mullins"
                             style='padding: 0px 10px; ;border: solid 1px black; height: 40px;vertical-align: middle;'>Click
                             me for a blue event!</button>
                         <button onclick="dummyClickGreen()" class="btn green" id="0123456789" custom="green button"

@@ -1,11 +1,13 @@
 var user_id = 'AgathaHarkness';
 var user_email = 'alisyn.collins+agatha@gmail.com';
 var user_full_name = 'Agatha Harkness';
-var user_account_id = 'Salemites';
+var user_account_id = 'CovenOfChaos';
 var user_language = 'en_US';
 var user_random_data = 'Señor Scratchy';
 var user_boolean = true;
 var user_account_type = 'Magic'
+var user_parent_account_id = 'Witches'
+var user_parent_account_name = 'Witches of the MCU'
 
 /*
 var user_id = 'Savathûn';
